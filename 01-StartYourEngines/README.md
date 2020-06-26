@@ -1,8 +1,8 @@
-*TODO: Add tutorial link, update office hours*
+*TODO: Update YouTube link, add tutorial link, update office hours*
 
 # Challenge #1: Start Your Engines!
 
-### Video overview: https://youtu.be/qFb6m58wR_Q
+### Video overview: <a href="https://youtu.be/qFb6m58wR_Q" target="_blank">https://youtu.be/qFb6m58wR_Q</a>
 
 ## Overview
 
