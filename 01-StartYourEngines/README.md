@@ -2,7 +2,7 @@
 
 # Challenge #1: Start Your Engines!
 
-### Video overview: <a href="https://youtu.be/_Z69LusV5e8" target="_blank">https://youtu.be/_Z69LusV5e8</a>
+### Video overview: https://youtu.be/_Z69LusV5e8
 
 ## Overview
 
