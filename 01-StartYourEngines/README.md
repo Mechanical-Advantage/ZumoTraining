@@ -33,7 +33,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 4. Your challenge is to use the tools seen in the template to accomplish something more interesting. Try setting up a simple course for the robot to navigate. You should include defined start and end locations, and at least one obstacle. For example, I've created this single design with a coffee mug. The robot needs to cross the start line, circle around the coffee mug, and return across the line. Modify the template so that the Zumo completes the course.
 
-![Track design with one coffee mug](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/img/01-simplecourse.jpg)
+![Track design with one coffee mug](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/img/01-simplecourse.jpg)
 
 6. Try more complex courses. Add more obstacles to make the course longer. How reliable are your results as the course gets longer?
 

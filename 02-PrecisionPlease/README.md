@@ -27,7 +27,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 1. Download "02-PrecisionPlease.ino" from GitHub and place it in a new folder. It should be placed under "ZumoTesting > 02-StartYourEngines > 02-StartYourEngines.ino" You may have to copy the text from your browser into a new file. Like the previous challenge, this sketch is your template, which you can develop from.
 
-2. Modify "arduino.json" under the ".vscode" folder. The path should now be "02-PrecisionPlease\\02-PrecisionPlease.ino" (or "01-PrecisionPlease/01-PrecisionPlease.ino" on Mac) This will allow you to upload this new sketch.
+2. Modify "arduino.json" under the ".vscode" folder. The path should now be "02-PrecisionPlease\\02-PrecisionPlease.ino" (or "02-PrecisionPlease/02-PrecisionPlease.ino" on Mac) This will allow you to upload this new sketch.
 
 3. Try uploading the template sketch and look at the LCD. What do the two numbers indicate? What does a A button do? Hint: it involves encoders :)
 
@@ -47,7 +47,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 6. Once you have a system you're happy with, we can make the pattern more complex. Try to make your Zumo drive forward 12 inches, then backwards 4 inches at a time until you reach the starting position. Wait for at least one second at each position.
 
-![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/img/02-path.png)
+![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/img/02-path.png)
 
 7. Upload a video of the Zumo completing this final challenge to Slack along with your code.
 
