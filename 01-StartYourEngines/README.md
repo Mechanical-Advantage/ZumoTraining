@@ -25,7 +25,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 ## Challenge
 
-1. Download the "01-StartYourEngines.ino" from GitHub and place it in a new folder. It should be found under "ZumoTesting > 01-StartYourEngines > 01-StartYourEngines.ino" You may have to copy the text from your browser into a new file. This sketch is your template, which you can develop from. Templates will be provided most of the time as a starting point for these challenges.
+1. Download "01-StartYourEngines.ino" from GitHub and place it in a new folder. It should be placed under "ZumoTesting > 01-StartYourEngines > 01-StartYourEngines.ino" You may have to copy the text from your browser into a new file. This sketch is your template, which you can develop from. Templates will be provided most of the time as a starting point for these challenges.
 
 2. Modify "arduino.json" under the ".vscode" folder. The path should now be "01-StartYourEngines\\01-StartYourEngines.ino" (or "01-StartYourEngines/01-StartYourEngines.ino" on Mac) This will allow you to upload this new sketch.
 
