@@ -21,7 +21,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have set up your VSCode IDE with Arduino. You can do so by following these instructions for [Mac](https://docs.google.com/presentation/d/1cyeOuGeWGI4tj6PQgyC6Zz0o6Nv5z3nh0UwPVeGp7-I/edit?usp=sharing) or [Windows](https://docs.google.com/presentation/d/1y6T2atl-b8Y2t-8qAfPKwe7EO9_AVQGZKfdK217bZew/edit?usp=sharing).
 
-* If you are new to programming or Arduino specifically, we recommend checking out [this tutorial](https://www.tutorialspoint.com/arduino/index.htm) as an introduction. You don't have to read every page, but it may be useful to get more familiar. You are also free to message us if you'de prefer we talk through some of this.
+* If you are new to programming or Arduino specifically, we recommend checking out the resources posted on #team_programming. You are also free to message us if you'de prefer we talk through some of this.
 
 ## Challenge
 
