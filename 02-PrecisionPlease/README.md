@@ -47,7 +47,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 6. Once you have a system you're happy with, we can make the pattern more complex. Try to make your Zumo drive forward 12 inches, then backwards 4 inches at a time until you reach the starting position. Wait for at least one second at each position.
 
-![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/img/02-path.png)
+![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/02-path.png)
 
 7. Upload a video of the Zumo completing this final challenge to Slack along with your code.
 
