@@ -1,10 +1,10 @@
-*TODO: Update office hours and video link*
+*TODO: Update office hours*
 
 # Challenge #2: Precision, Please
 
-### Video overview: *Coming soon*
-
 ## Overview
+
+### [Video Overview](https://drive.google.com/file/d/1aXa1iA_fBtItPZEm_xknWo3Eckbg9F4s/view?usp=sharing)
 
 You may have encountered some annoying limitations during "Challenge #1: Start Your Engines!" For example, the distance the robot drove sometimes varied. You also couldn't specify a distance in normal units and had to change the timing to compensate for speed. In this challenge, you will address many of these issues by creating a program which drives with far greater precision.
 
@@ -47,7 +47,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 6. Once you have a system you're happy with, we can make the pattern more complex. Try to make your Zumo drive forward 12 inches, then backwards 4 inches at a time until you reach the starting position. Wait for at least one second at each position.
 
-![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/img/02-path.png)
+![Diagram of target path](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/img/02-path.png)
 
 7. Upload a video of the Zumo completing this final challenge to Slack along with your code.
 

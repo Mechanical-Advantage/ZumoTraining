@@ -29,8 +29,8 @@ void loop()
 
     // This resets the encoder values for both sides when the A button is pressed
     if (buttonA.isPressed()) {
-        encoder.getCountsAndResetLeft();
-        encoder.getCountsAndResetRight();
+        encoders.getCountsAndResetLeft();
+        encoders.getCountsAndResetRight();
     }
 
     // This waits before updating the display (if we updated as fast as possible, the values would not be visible)

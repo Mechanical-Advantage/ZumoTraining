@@ -2,9 +2,9 @@
 
 # Challenge #1: Start Your Engines!
 
-### Video overview: https://youtu.be/_Z69LusV5e8
-
 ## Overview
+
+### [Video Overview](https://drive.google.com/file/d/1Evu7U215m0wUzJYeq3J1V9MMWFgMboXY/view?usp=sharing)
 
 When starting in a new environment, programmers will often create a "Hello world" program - enough to do something interesting but not overly complex. This is the Zumo version of "Hello world." Your challenge is to begin to explore how to interact with the basic functions of the Zumo - motors, buttons, and LEDs, by programming the Zumo to drive along a simple path.
 
@@ -21,7 +21,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have set up your VSCode IDE with Arduino. You can do so by following these instructions for [Mac](https://docs.google.com/presentation/d/1cyeOuGeWGI4tj6PQgyC6Zz0o6Nv5z3nh0UwPVeGp7-I/edit?usp=sharing) or [Windows](https://docs.google.com/presentation/d/1y6T2atl-b8Y2t-8qAfPKwe7EO9_AVQGZKfdK217bZew/edit?usp=sharing).
 
-* If you are new to programming or Arduino specifically, we recommend checking out the resources posted on #team_programming. You are also free to message us if you'de prefer we talk through some of this.
+* If you are new to programming or Arduino specifically, we recommend checking out the resources posted on #team_programming. You are also free to message us if you'd prefer we talk through some of this.
 
 ## Challenge
 
@@ -33,7 +33,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 4. Your challenge is to use the tools seen in the template to accomplish something more interesting. Try setting up a simple course for the robot to navigate. You should include defined start and end locations, and at least one obstacle. For example, I've created this single design with a coffee mug. The robot needs to cross the start line, circle around the coffee mug, and return across the line. Modify the template so that the Zumo completes the course.
 
-![Track design with one coffee mug](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/img/01-simplecourse.jpg)
+![Track design with one coffee mug](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/img/01-simplecourse.jpg)
 
 6. Try more complex courses. Add more obstacles to make the course longer. How reliable are your results as the course gets longer?
 
