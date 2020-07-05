@@ -1,6 +1,5 @@
 {
     "board": "pololu-a-star:avr:a-star32U4",
     "sketch": "blink.ino",
-    "output": "build",
-    "port": "/dev/tty.usbmodem621"
+    "output": "build"
 }
