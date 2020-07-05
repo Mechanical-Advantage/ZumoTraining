@@ -1,5 +1,3 @@
-*TODO: Update office hours*
-
 # Challenge #2: Precision, Please
 
 ## Video Overview: [Click Here](https://drive.google.com/file/d/1aXa1iA_fBtItPZEm_xknWo3Eckbg9F4s/view?usp=sharing)

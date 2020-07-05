@@ -1,5 +1,3 @@
-*TODO: Update office hours & tutorials*
-
 # Challenge #1: Start Your Engines!
 
 ## Video Overview: [Click Here](https://drive.google.com/file/d/1Evu7U215m0wUzJYeq3J1V9MMWFgMboXY/view?usp=sharing)
@@ -16,13 +14,11 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have set up your VSCode IDE with Arduino. You can do so by following these instructions for [Mac](https://docs.google.com/presentation/d/1cyeOuGeWGI4tj6PQgyC6Zz0o6Nv5z3nh0UwPVeGp7-I/edit?usp=sharing) or [Windows](https://docs.google.com/presentation/d/1y6T2atl-b8Y2t-8qAfPKwe7EO9_AVQGZKfdK217bZew/edit?usp=sharing).
 
-* If you are new to programming or Arduino specifically, we recommend checking out some of these resouces:
+* If you are new to programming or Arduino specifically, we recommend checking out these resouces:
 
-    * Alex's fantastic Arduino tutorial
+    * https://www.learn-c.org/en/Welcome - This tutorial provides an introduction to C, the language we will use to program the Zumos. It includes a series of escalating challenges that you can try in your browser. We recommend completing the section "Learn the Basics" but "Advanced" will go beyond the scope of our program.
 
-    * Victoria's fabulous C++ tutorial
-
-    * Fred's outstanding Arduino challenges
+    * https://www.tutorialspoint.com/arduino/index.htm - This provides an introduction to Arduino specifically, the board which powers the Zumo. This site contains a large amount of information - don't worry about understanding everything.
 
 ## Challenge
 
