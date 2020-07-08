@@ -24,7 +24,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 1. Download "01-StartYourEngines.zip" from GitHub and unzip it to create a new folder. We recommend placing this folder under "Documents." This folder is your template, which you can develop from. Templates will be provided most of the time as a starting point for these challenges.
 
-2. Open this *folder* in VSCode, then click on "01-StartYourEngines.ino"
+2. Open this *folder* in VSCode, then click on "01-StartYourEngines.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
 3. Try uploading the template sketch. What happens when you press the A button on the Zumo? Read through the code and try to understand what each line does.
 

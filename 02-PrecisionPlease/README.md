@@ -20,7 +20,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 1. Download "02-PrecisionPlease.zip" from GitHub and unzip it to create a new folder. We recommend placing this folder under "Documents." Again, this folder will be your templates that you develop from.
 
-2. Open this *folder* in VSCode, then click on "02-PrecisionPlease.ino"
+2. Open this *folder* in VSCode, then click on "02-PrecisionPlease.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
 3. Try uploading the template sketch and look at the LCD. What do the two numbers indicate? What does a A button do? Hint: it involves encoders :)
 
