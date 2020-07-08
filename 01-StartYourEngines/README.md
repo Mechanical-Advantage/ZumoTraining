@@ -32,7 +32,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 ![Track design with one coffee mug](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/01-simplecourse.jpg)
 
-6. Try more complex courses. Add more obstacles to make the course longer. How reliable are your results as the course gets longer?
+6. Try more complex courses. Add more obstacles to make the course longer. How reliable are your results as the course gets longer? Try to make the robot turn in a variety of ways - how may ways can you think of?
 
 7. Try changing the speed of the motors. How does that affect the robot's path? Does it become more or less reliable as the speed increases?
 
