@@ -1,6 +1,6 @@
 # Challenge #2: Precision, Please
 
-## Video Overview: [Click Here](https://drive.google.com/file/d/1aXa1iA_fBtItPZEm_xknWo3Eckbg9F4s/view?usp=sharing)
+## Video Overview: [Click Here](https://drive.google.com/file/d/1pSs_jI5-8FlRpv6a2jkbTNq9_bT211vh/view?usp=sharing)
 
 ## Overview
 
