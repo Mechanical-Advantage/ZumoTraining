@@ -2,6 +2,8 @@
 
 ## Video Overview: [Click Here](https://drive.google.com/file/d/1qaBay04gGvzOlfpG49dDE3zbFJk2_C-8/view?usp=sharing)
 
+You may not be able to play the video in Google Chrome. Please use another browser (Microsoft Edge, Firefox, Safari, etc.) if you encounter issues.
+
 ## Overview
 
 When starting in a new environment, programmers will often create a "Hello world" program - enough to do something interesting but not overly complex. This is the Zumo version of "Hello world." Your challenge is to begin to explore how to interact with the basic functions of the Zumo - motors, buttons, and LEDs, by programming the Zumo to drive along a simple path.

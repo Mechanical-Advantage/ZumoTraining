@@ -2,6 +2,8 @@
 
 ## Video Overview: [Click Here](https://drive.google.com/file/d/1pSs_jI5-8FlRpv6a2jkbTNq9_bT211vh/view?usp=sharing)
 
+You may not be able to play the video in Google Chrome. Please use another browser (Microsoft Edge, Firefox, Safari, etc.) if you encounter issues.
+
 ## Overview
 
 You may have encountered some annoying limitations during "Challenge #1: Start Your Engines!" For example, the distance the robot drove sometimes varied. You also couldn't specify a distance in normal units and had to change the timing to compensate for speed. In this challenge, you will address many of these issues by creating a program which drives with far greater precision.
