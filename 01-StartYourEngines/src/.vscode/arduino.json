@@ -1,5 +1,0 @@
-{
-    "board": "pololu-a-star:avr:a-star32U4",
-    "sketch": "01-StartYourEngines.ino",
-    "output": "build"
-}
