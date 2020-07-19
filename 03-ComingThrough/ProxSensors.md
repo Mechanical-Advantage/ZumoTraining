@@ -23,10 +23,7 @@ In which trial was the object closer to the robot?
 
 <details>
     <summary>Answer</summary>
-
-    The object was closer during trial B.
-
-    When the object is closer to the robot, it reflects more light. Therefore, the pulse doesn't have to be as bright for the light to be detected. In trial A, levels 1-4 were not detected because the object was too far away for enough light to be reflected.
-
-    The proximity sensors report the number of brightness levels that were detected, allowing you to estimate the distance to an object.
+    The object was closer during trial B. When the object is closer to the robot, it reflects more light. Therefore, the pulse doesn't have to be as bright for the light to be detected. In trial A, levels 1-4 were not detected because the object was too far away for enough light to be reflected.
 </details>
+
+The proximity sensors report the number of brightness levels that were detected, allowing you to estimate the distance to an object.
