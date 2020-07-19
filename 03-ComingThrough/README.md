@@ -23,3 +23,8 @@ If you need assistance with anything (even if you just don't know where to start
 1. Download "03-ComingThrough.zip" from GitHub and unzip it to create a new folder. We recommend placing this folder under "Documents." Again, this folder will be your templates that you develop from.
 
 2. Open this *folder* in VSCode, then click on "03-ComingThrough.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
+
+3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference sheet for information on what this means). This is the layout on the LCD:
+
+Left sensor, left emitters | Front sensor, left emitters | Right sensor, left emitters
+Left sensor, right emitters | Front sensor, right emitters | Right sensor, right emitters
