@@ -16,7 +16,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have completed all previous challenges - this challenge builds off what you have previously learned.
 
-* You should read through [this page](https://example.com), which explains how the proximity sensors on the Zumo are positioned and how to interpret the data they produce.
+* You should read through [this page](https://github.com/Mechanical-Advantage/Training2020/blob/development/03-ComingThrough/ProxSensors.md), which explains how the proximity sensors on the Zumo are positioned and how to interpret the data they produce.
 
 ## Challenge
 
