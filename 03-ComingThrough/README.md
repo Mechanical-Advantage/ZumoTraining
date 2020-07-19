@@ -27,4 +27,5 @@ If you need assistance with anything (even if you just don't know where to start
 3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference sheet for information on what this means). This is the layout on the LCD:
 
 Left sensor, left emitters | Front sensor, left emitters | Right sensor, left emitters
+--- | --- | ---
 Left sensor, right emitters | Front sensor, right emitters | Right sensor, right emitters
