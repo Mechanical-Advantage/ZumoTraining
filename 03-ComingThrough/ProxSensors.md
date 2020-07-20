@@ -2,7 +2,7 @@
 
 The Zumo's proximity sensors are used to detect objects in front and to the sides of the robot. They do not precisely measure the position or location, but instead sense the general presense of objects in a wide range.
 
-The proximity sensors detect objects using infared (IR) light, which is invisible to the human eye. The robot sends out pulses of IR light and detects if they are reflected back, indicating the presense of an object. This is useful, but we'd also like to determine the position of the object - its distance and directin.
+The proximity sensors detect objects using infared (IR) light, which is invisible to the human eye. The robot sends out pulses of IR light and detects if they are reflected back, indicating the presense of an object. This is useful, but we'd also like to determine the position of the object - its distance and direction.
 
 ## Determining Distance
 
