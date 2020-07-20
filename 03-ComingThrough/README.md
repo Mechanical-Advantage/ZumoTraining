@@ -1,7 +1,5 @@
 # Challenge #2: Coming Through!
 
-## Video Overview: [Click Here](https://example.com)
-
 You may not be able to play the video in Google Chrome. Please use another browser (Microsoft Edge, Firefox, Safari, etc.) if you encounter issues.
 
 ## Overview
