@@ -50,7 +50,7 @@ If you need assistance with anything (even if you just don't know where to start
         This problem could be solved with two formulas. Think of the problem this way - you have 6 inputs (the proximity sensors) and 2 outputs (the motor speeds). How can you generate the ideal speed for a particular motor using a formula with the proximity sensors as inputs?
         <details>
             <summary>Example</summary>
-            This is an exmaple of a simple calculation for the left motor speed. Try to expand on it!
+            This is an example of a simple calculation for the left motor speed. Try to expand on it!
             
         left motor = 120 + proxSensors.countsLeftWithLeftLeds() * 20
     </details>
