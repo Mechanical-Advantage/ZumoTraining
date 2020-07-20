@@ -1,7 +1,5 @@
 # Challenge #2: Coming Through!
 
-You may not be able to play the video in Google Chrome. Please use another browser (Microsoft Edge, Firefox, Safari, etc.) if you encounter issues.
-
 ## Overview
 
 The previous challenge shows how we can use the Zumo's sensors to our advantage. This challenge will expand on that concept by introducing the proximity sensors, which provide data on the robot's surroundings. Using these sensors, you will create a program that allows the Zumo to navigate complex spaces autonomously.
