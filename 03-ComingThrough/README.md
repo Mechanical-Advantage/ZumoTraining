@@ -24,8 +24,37 @@ If you need assistance with anything (even if you just don't know where to start
 
 2. Open this *folder* in VSCode, then click on "03-ComingThrough.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
-3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference sheet for information on what this means). This is the layout on the LCD:
+3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference page for information on what this means). The top row shows the values from the left emitter and the bottom row shows the values from the right emitter. Each row shows the left, front, and right sensors in order.
 
-Left sensor, left emitters | Front sensor, left emitters | Right sensor, left emitters
---- | --- | ---
-Left sensor, right emitters | Front sensor, right emitters | Right sensor, right emitters
+4. Experiment by moving objects around the Zumo to get a sense of what each value indicates. You can also press A to start driving forwards. The Zumo will automatically stop when it detects an object in front of it.
+
+5. Your challenge is to use the proximity sensors such that the Zumo will autonomously navigate a room on the floor for as long an possible. It should avoid obstacles and walls while driving quickly. There are a wide variety of approaches to this problem that will produce different results. We'd encourage you to start by trying to come up with your own unique approach. However, we also have some hints for potential approaches if you get stuck. Click the arrows below to reveal some starting points or ways to expand your current thinking.
+
+    <details>
+        <summary>Approach #1: Basic</summary>
+        Think about what the template program already accomplishes - it stops when it detects an object in front of it. This is already most of the way to completing the challenge. Maybe you could adjust it so that the instead of stopping, it tries to find a new direction... :eyes:
+    </details>
+
+    <details>
+        <summary>Approach #2: Intermediate</summary>
+        The Zumo doesn't just detect objects in front of it - you also want avoid obstacles on the sides. The template shows an example of how to stop when an object appears in front. This could be expanded, so that the Zumo stops when it sees an obstacle it any direction! However, we don't just want to stop in place. Maybe it could  change direction instead? :thinking:
+    </details>
+
+    <details>
+        <summary>Approach #3: Advanced</summary>
+        If you've already gotten the Zumo to stop or reorient when it detects an obstacle, let's expand on that. Remember that the proximity sensors detect the distance to an object (starting from quite a ways away). Maybe it could start reacting to an obstacle before it comes too close? How should the response be different depending on the distance?
+    </details>
+
+    <details>
+        <summary>Approach #4: Expert</summary>
+        This problem could be solved with two formulas. Think of the problem this way - you have 6 inputs (the proximity sensors) and 2 outputs (the motor speeds). How can you generate the ideal speed for a particular motor using a formula with the proximity sensors as inputs?
+        <details>
+            <summary>Example</summary>
+            This is an exmaple of a simple calculation for the left motor speed. Try to expand on it!
+            
+        left motor = 120 + proxSensors.countsLeftWithLeftLeds() * 20
+    </details>
+
+6. We can't wait to see what approaches you come up with! Upload a video to Slack of the Zumo running around the floor along with your code.
+
+**Remember, if you are stuck please ask for assistance on Slack or during office hours.**
