@@ -1,4 +1,4 @@
-# Challenge #2: Coming Through!
+# Challenge #3: Coming Through!
 
 ## Overview
 
