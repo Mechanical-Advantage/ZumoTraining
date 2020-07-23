@@ -24,7 +24,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 4. Experiment by moving objects around the Zumo to get a sense of what each value indicates. You can also press A to start driving forwards. The Zumo will automatically stop when it detects an object in front of it.
 
-5. Your challenge is to use the proximity sensors such that the Zumo will autonomously navigate a room on the floor for as long an possible. It should avoid obstacles and walls while driving quickly. There are a wide variety of approaches to this problem that will produce different results. We'd encourage you to start by trying to come up with your own unique approach. However, we also have some hints for potential approaches if you get stuck. Click the arrows below to reveal some starting points or ways to expand your current thinking.
+5. Your challenge is to use the proximity sensors such that the Zumo will autonomously navigate a room on the floor for as long as possible. It should avoid obstacles and walls while driving quickly. There are a wide variety of approaches to this problem that will produce different results. We'd encourage you to start by trying to come up with your own unique approach. However, we also have some hints for potential approaches if you get stuck. Click the arrows below to reveal some starting points or ways to expand your current thinking.
 
     <details>
         <summary>Approach #1: Basic</summary>

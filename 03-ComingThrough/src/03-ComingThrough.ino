@@ -25,17 +25,23 @@ void loop()
     lcd.clear();
 
     // These print the proximity readings in a grid pattern
-    lcd.print(proxSensors.countsLeftWithLeftLeds());
+    lcd.gotoXY(2, 0);
+    lcd.print(proxSensors.countsFrontWithLeftLeds()); // View in front and slight left (front sensor, left emitters)
+
+    lcd.gotoXY(4, 0);
+    lcd.print(proxSensors.countsFrontWithRightLeds()); // View in front and slight right (front sensor, right emitters)
+
     lcd.gotoXY(0, 1);
-    lcd.print(proxSensors.countsLeftWithRightLeds());
-    lcd.gotoXY(3, 0);
-    lcd.print(proxSensors.countsFrontWithLeftLeds());
-    lcd.gotoXY(3, 1);
-    lcd.print(proxSensors.countsFrontWithRightLeds());
-    lcd.gotoXY(6, 0);
-    lcd.print(proxSensors.countsRightWithLeftLeds());
+    lcd.print(proxSensors.countsLeftWithLeftLeds()); // View directly to the left (left sensor, left emitters)
+
+    lcd.gotoXY(2, 1);
+    lcd.print(proxSensors.countsLeftWithRightLeds()); // Wider view, particularly to the left (left sensor, right emitters)
+
+    lcd.gotoXY(4, 1);
+    lcd.print(proxSensors.countsRightWithLeftLeds()); // Wider view, particularly to the right (right sensor, left emitters)
+
     lcd.gotoXY(6, 1);
-    lcd.print(proxSensors.countsRightWithRightLeds());
+    lcd.print(proxSensors.countsRightWithRightLeds()); // View directly to the right (right sensor, right emitters)
 
     // This starts the motors when the A button is pressed
     if (buttonA.isPressed())

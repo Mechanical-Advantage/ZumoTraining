@@ -1,6 +1,6 @@
 # Zumo Proximity Sensor Reference
 
-The Zumo's proximity sensors are used to detect objects in front and to the sides of the robot. They do not precisely measure the position or location, but instead sense the general presense of objects in a wide range.
+The Zumo's proximity sensors are used to detect objects in front and to the sides of the robot. They do not precisely measure the position or location, but instead sense the general presense of objects in a broad arc.
 
 The proximity sensors detect objects using infared (IR) light, which is invisible to the human eye. The robot sends out pulses of IR light and detects if they are reflected back, indicating the presense of an object. This is useful, but we'd also like to determine the position of the object - its distance and direction.
 
@@ -12,7 +12,7 @@ By default, the Zumo sends out 6 pulses at increasing brightness levels. It reco
 
 Level | Reflected? (Trial A) | Reflected? (Trial B)
 --- | --- | ---
-Level 1 (darkest) | :heavy_multiplication_x: | :heavy_multiplication_x:
+Level 1 (dimest) | :heavy_multiplication_x: | :heavy_multiplication_x:
 Level 2 | :heavy_multiplication_x: | :heavy_check_mark:
 Level 3 | :heavy_multiplication_x: | :heavy_check_mark:
 Level 4 | :heavy_multiplication_x: | :heavy_check_mark:
@@ -42,7 +42,7 @@ This diagram shows the overall positions of the emitters and sensors top-down:
 
 ![Overview diagram of proximity sensors](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/03-overview.png)
 
-When you read the proximity sensors, a series of pulses (see previous section) are sent out on one side, then the other. You can then read the number of brightness levels detected by each of the sensors from the left and right sides - 6 values in total. Feel free to reference this table to see how/why to use each value:
+When you call the function to update the proximity sensor values, a series of pulses (see previous section) are sent out on one side, then the other. You can then read the number of brightness levels detected by each of the sensors from the left and right sides - 6 values in total. Feel free to reference this table to see how/why to use each value:
 
 Emitter | Sensor | Method | Purpose
 --- | --- | --- | ---
