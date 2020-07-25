@@ -20,7 +20,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 2. Open this *folder* in VSCode, then click on "03-ComingThrough.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
-3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference page for information on what this means). The top row shows the values from the left emitter and the bottom row shows the values from the right emitter. Each row shows the left, front, and right sensors in order.
+3. Try uploading the template sketch. The LCD shows the 6 values from the proximity sensors (see the reference page for information on what this means). The top row shows the values from the front sensor, and the left and right numbers show the left emitters + left sensor and right emitters + right sensor. The two numbers in the center show the left sensor + right emitters and the right sensor + left emitters.
 
 4. Experiment by moving objects around the Zumo to get a sense of what each value indicates. You can also press A to start driving forwards. The Zumo will automatically stop when it detects an object in front of it.
 
