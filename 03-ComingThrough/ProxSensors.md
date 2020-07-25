@@ -32,15 +32,15 @@ The proximity sensors report the number of brightness levels that were detected,
 
 The general location of objects can be determined using the various positions of the IR emitters and sensors. The Zumo has emitters of the left and right sides of the robot. On each side, one emitter is directly on the side while another is in front, marked below. These two emitters always operate together, but each set (side) is controlled independently.
 
-![Diagram of side emitters](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/03-emitters.png)
+![Diagram of side emitters](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/03-emitters.png)
 
 The Zumo has 3 IR sensors - on the left, front, and right sides of the robot. They are visible on the front sensor array under the robot, seen below. Each of these sensors can be read independently.
 
-![Diagram of sensors](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/03-sensors.png)
+![Diagram of sensors](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/03-sensors.png)
 
 This diagram shows the overall positions of the emitters and sensors top-down:
 
-![Overview diagram of proximity sensors](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/03-overview.png)
+![Overview diagram of proximity sensors](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/03-overview.png)
 
 When you call the function to update the proximity sensor values, a series of pulses (see previous section) are sent out on one side, then the other. You can then read the number of brightness levels detected by each of the sensors from the left and right sides - 6 values in total. Feel free to reference this table to see how/why to use each value:
 
