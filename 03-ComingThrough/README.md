@@ -33,7 +33,7 @@ If you need assistance with anything (even if you just don't know where to start
 
     <details>
         <summary>Approach #2: Intermediate</summary>
-        The Zumo doesn't just detect objects in front of it - you also want avoid obstacles on the sides. The template shows an example of how to stop when an object appears in front. This could be expanded, so that the Zumo stops when it sees an obstacle it any direction! However, we don't just want to stop in place. Maybe it could  change direction instead? :thinking:
+        The Zumo doesn't just detect objects in front of it - you also want avoid obstacles on the sides. The template shows an example of how to stop when an object appears in front. This could be expanded, so that the Zumo stops when it sees an obstacle it any direction! However, we don't just want to stop in place. Maybe it could change direction instead? :thinking:
     </details>
 
     <details>
