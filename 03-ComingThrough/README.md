@@ -28,7 +28,7 @@ If you need assistance with anything (even if you just don't know where to start
 
     <details>
         <summary>Approach #1: Basic</summary>
-        Think about what the template program already accomplishes - it stops when it detects an object in front of it. This is already most of the way to completing the challenge. Maybe you could adjust it so that the instead of stopping, it tries to find a new direction... :eyes:
+        Think about what the template program already accomplishes - it stops when it detects an object in front of it. This is already most of the way to completing the challenge. Maybe you could adjust it so that instead of stopping, it tries to find a new direction... :eyes:
     </details>
 
     <details>
