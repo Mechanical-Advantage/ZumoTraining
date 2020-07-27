@@ -47,3 +47,5 @@ If you need assistance with anything (even if you just don't know where to start
 7. Upload a video of the Zumo completing this final challenge to Slack along with your code.
 
 **Remember, if you are stuck please ask for assistance on Slack or during office hours.**
+
+We have provided a [post challenge review](https://github.com/Mechanical-Advantage/Training2020/blob/development/02-PrecisionPlease/PostChallenge.md) (which can be read individually or discussed as a group).
