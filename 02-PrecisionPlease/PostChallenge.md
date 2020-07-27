@@ -50,7 +50,7 @@ This is a possible compromise between the first two approaches because it is nea
 
 ![Graph of approach #4](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/02-approach-4.png)
 
-This is an improved way to get both speed and accuracy without overshoot. The principle of proprotional control is that movement is quicker depending on the distance to the target. This reduces the time the movement takes without sacrificing accuracy (since slow movement is used near the end). When using proportional control, the key is to choose the right "gain" - the factor used in the formula. This example shows what happens when the gain is too low. Eventually, the requested speed falls below the minimum speed where the robot will stop moving short of the target.
+This is an improved way to get both speed and accuracy without overshoot. The principle of proprotional control is that movement is quicker depending on the distance to the target. This reduces the time the movement takes without sacrificing accuracy (since slow movement is used near the end). When using proportional control, the key is to choose the right "gain" - the factor used in the formula. This example shows what happens when the gain is too low. Eventually, the requested speed falls below the minimum speed where the robot will move, causing it to fall short of the target.
 
 ### Approach #5: Proportional Control (Very High Gain)
 
