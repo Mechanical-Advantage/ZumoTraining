@@ -36,7 +36,7 @@ This system is one of the simplest possible, and it reaches the target (12 inche
 
 By decreasing the speed, the overshoot is reduced significantly meaning the final result is more accurate than the first approach. However, reducing the speed means that the movement takes far longer.
 
-*** Approach #3: Stop on Target and Return
+### Approach #3: Stop on Target and Return
 
 *Drives at speed 300 until it reaches 12 inches, then backs up at speed 100 until less than 12 inches.*
 
@@ -44,7 +44,7 @@ By decreasing the speed, the overshoot is reduced significantly meaning the fina
 
 This is a possible compromise between the first two approaches because it is nearly as fast as the first one with the accuracy of the second. However, it still overshoots signifcantly. Ideally, it should stop at the target on the first attempt.
 
-*** Approach #4: Proportional Control (Low Gain)
+### Approach #4: Proportional Control (Low Gain)
 
 *Drives at speed (distance remaining * 25).*
 
@@ -52,7 +52,7 @@ This is a possible compromise between the first two approaches because it is nea
 
 This is an improved way to get both speed and accuracy without overshoot. The principle of proprotional control is that movement is quicker depending on the distance to the target. This reduces the time the movement takes without sacrificing accuracy (since slow movement is used near the end). When using proportional control, the key is to choose the right "gain" - the factor used in the formula. This example shows what happens when the gain is too low. Eventually, the requested speed falls below the minimum speed where the robot will move.
 
-*** Approach #5: Proportional Control (Very High Gain)
+### Approach #5: Proportional Control (Very High Gain)
 
 *Drives at speed (distance remaining * 40,000).*
 
@@ -60,7 +60,7 @@ This is an improved way to get both speed and accuracy without overshoot. The pr
 
 This example shows what happens when the gain is too high. The robot tends to move back and forth across the target multiple time, potentially (as in this case) never finishing the movement. This is called "oscillation". Proportional control works best when you find the "sweet spot" for the gain, where the movement completes without oscillation.
 
-*** Approach #6: Proportional Control with Minimum Speed
+### Approach #6: Proportional Control with Minimum Speed
 
 *Drives at speed (distance remaining * 150), with a minimum speed of 70.*
 
