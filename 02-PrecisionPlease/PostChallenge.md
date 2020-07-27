@@ -50,7 +50,7 @@ This is a possible compromise between the first two approaches because it is nea
 
 ![Graph of approach #4](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/02-approach-4.png)
 
-This is an improved way to get both speed and accuracy without overshoot. The principle of proprotional control is that movement is quicker depending on the distance to the target. This reduces the time the movement takes without sacrificing accuracy (since slow movement is used near the end). When using proportional control, the key is to choose the right "gain" - the factor used in the formula. This example shows what happens when the gain is too low. Eventually, the requested speed falls below the minimum speed where the robot will move.
+This is an improved way to get both speed and accuracy without overshoot. The principle of proprotional control is that movement is quicker depending on the distance to the target. This reduces the time the movement takes without sacrificing accuracy (since slow movement is used near the end). When using proportional control, the key is to choose the right "gain" - the factor used in the formula. This example shows what happens when the gain is too low. Eventually, the requested speed falls below the minimum speed where the robot will stop moving short of the target.
 
 ### Approach #5: Proportional Control (Very High Gain)
 
@@ -66,4 +66,4 @@ This example shows what happens when the gain is too high. The robot tends to mo
 
 ![Graph of approach #6](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/02-approach-6.png)
 
-In some situtations, proportional control can also be preventing the motors from running below a set speed. This prevents the problem with approach #4, where the motors stop moving entirely. This approach allows the robot to move quickly and accurately without overshoot.
+In some situtations, proportional control can be improved preventing the motors from running below a set speed. This prevents the problem with approach #4, where the motors stop moving short of the target. This approach allows the robot to move quickly and accurately without overshoot.
