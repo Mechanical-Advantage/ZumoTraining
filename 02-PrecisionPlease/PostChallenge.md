@@ -67,3 +67,78 @@ This example shows what happens when the gain is too high. The robot tends to mo
 ![Graph of approach #6](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/02-approach-6.png)
 
 In some situtations, proportional control can be improved preventing the motors from running below a set speed. This prevents the problem with approach #4, where the motors stop moving short of the target. This approach allows the robot to move quickly and accurately without overshoot.
+
+## Event Loops
+
+During this challenge, you may have encoutered difficulty when figuring out how to structure the code (given that it requires multiple independent movements). In this and future challenge, it is important to understand the event loop structure, which allows code to be complex and expandable. For example, imagine we want the red LED to toggle on and off when we press the A button. Here's a simple way to accomplish that task:
+
+```c
+void loop()
+{
+    buttonA.waitForPress();
+    ledRed(1);
+    buttonA.waitForPress();
+    ledRed(0);
+}
+```
+
+This is effective, but it does not follow the event loop structure - the main loop is forced to stop and wait for input. When writing an event loop, the main loop should always be running (taking in input as it goes). We could rewrite the above code like this:
+
+```c
+bool buttonAReleased = true;
+bool redOn = false;
+
+void loop()
+{
+    if (buttonA.isPressed())
+    {
+        if (buttonAReleased) // Don't toggle if already pressed
+        {
+            redOn = !redOn; // Toggle "redOn"
+            buttonAReleased = false;
+            ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
+        }
+    } else { // Reset when released
+        buttonAReleased = true;
+    }
+}
+```
+
+This is signifcantly more complex, so it may seem counterproductive. However, the advantage to using this event loop structure is that it is far more expandable. For example, we might also want to make the B button toggle the yellow LED. This is impossible in the first example but easy in an event loop:
+
+```c
+bool buttonAReleased = true;
+bool buttonBReleased = true;
+bool redOn = false;
+bool yellowOn = false;
+
+void loop()
+{
+    if (buttonA.isPressed())
+    {
+        if (buttonAReleased) // Don't toggle if already pressed
+        {
+            redOn = !redOn; // Toggle "redOn"
+            buttonAReleased = false;
+            ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
+        }
+    } else { // Reset when released
+        buttonAReleased = true;
+    }
+
+    // Duplicate the above code to handle the yellow LED
+    if (buttonB.isPressed())
+    {
+        if (buttonBReleased) // Don't toggle if already pressed
+        {
+            yellowOn = !yellowOn; // Toggle "yellowOn"
+            buttonBReleased = false;
+            ledYellow(yellowOn ? 1 : 0); // Set the LED based on "yellowOn"
+        }
+    } else { // Reset when released
+        buttonBReleased = true;
+    }
+}
+```
+
+As the challenges become more complex, following this event loop structure will make it far easier to create complex programs.
