@@ -85,58 +85,38 @@ void loop()
 This is effective, but it does not follow the event loop structure - the main loop is forced to stop and wait for input. When writing an event loop, the main loop should always be running (taking in input as it goes). We could rewrite the above code like this:
 
 ```c
-bool buttonAReleased = true;
 bool redOn = false;
 
 void loop()
 {
-    if (buttonA.isPressed())
+    if (buttonA.getSingleDebouncedPress())
     {
-        if (buttonAReleased) // Don't toggle if already pressed
-        {
-            redOn = !redOn; // Toggle "redOn"
-            buttonAReleased = false;
-            ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
-        }
-    } else { // Reset when released
-        buttonAReleased = true;
+        redOn = !redOn; // Toggle "redOn"
+        ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
     }
 }
 ```
 
 This is signifcantly more complex, so it may seem counterproductive. However, the advantage to using this event loop structure is that it is far more expandable. For example, we might also want to make the B button toggle the yellow LED. This is impossible in the first example but easy in an event loop:
 
-```c
-bool buttonAReleased = true;
-bool buttonBReleased = true;
+```c\
 bool redOn = false;
 bool yellowOn = false;
 
 void loop()
 {
-    if (buttonA.isPressed())
+    if (buttonA.getSingleDebouncedPress())
     {
-        if (buttonAReleased) // Don't toggle if already pressed
-        {
-            redOn = !redOn; // Toggle "redOn"
-            buttonAReleased = false;
-            ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
-        }
-    } else { // Reset when released
-        buttonAReleased = true;
+        redOn = !redOn; // Toggle "redOn"
+        ledRed(redOn ? 1 : 0); // Set the LED based on "redOn"
     }
+    
 
     // Duplicate the above code to handle the yellow LED
-    if (buttonB.isPressed())
+    if (buttonB.getSingleDebouncedPress())
     {
-        if (buttonBReleased) // Don't toggle if already pressed
-        {
-            yellowOn = !yellowOn; // Toggle "yellowOn"
-            buttonBReleased = false;
-            ledYellow(yellowOn ? 1 : 0); // Set the LED based on "yellowOn"
-        }
-    } else { // Reset when released
-        buttonBReleased = true;
+        yellowOn = !yellowOn; // Toggle "yellowOn"
+        ledYellow(yellowOn ? 1 : 0); // Set the LED based on "yellowOn"
     }
 }
 ```
