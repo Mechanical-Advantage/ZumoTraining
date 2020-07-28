@@ -99,7 +99,7 @@ void loop()
 
 This is signifcantly more complex, so it may seem counterproductive. However, the advantage to using this event loop structure is that it is far more expandable. For example, we might also want to make the B button toggle the yellow LED. This is impossible in the first example but easy in an event loop:
 
-```c\
+```c
 bool redOn = false;
 bool yellowOn = false;
 
