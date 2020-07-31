@@ -20,7 +20,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 ## Challenge
 
-1. Download "03-ComingThrough.zip" from GitHub and unzip it to create a new folder. We recommend placing this folder under "Documents." Again, this folder will be your templates that you develop from.
+1. Download "03-ComingThrough.zip" from GitHub and unzip it to create a new folder. We recommend placing this folder under "Documents." Again, this folder will be your template that you develop from.
 
 2. Open this *folder* in VSCode, then click on "03-ComingThrough.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
