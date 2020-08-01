@@ -71,7 +71,7 @@ void loop()
     lineSensors.readCalibrated(sensorValues);
 
     // This checks for the ending box and displays the final time
-    if (sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD) // Check when none of the sensors see white
+    if (sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD && millis() - startTime > 3000) // Check when none of the sensors see white and at least 3 seconds have passed
     {
         unsigned long endTime = millis(); // Save the ending time
         motors.setSpeeds(0, 0);           // Stop the motors
