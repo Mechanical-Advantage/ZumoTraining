@@ -1,8 +1,8 @@
 #include <Zumo32U4.h>
 
 // These lines define two constants, which can be refered to in the code and never change. Making these values constants instead of including them directly in the code makes it easier to adjust them later.
-#define WHITE_THRESHOLD 150;  // The cutoff value for distinguising white (less than this value is white, higher is gray/black)
-#define DISPLAY_INTERVAL 250; // The number of milliseconds to wait before updating the LCD
+#define WHITE_THRESHOLD 150  // The cutoff value for distinguising white (less than this value is white, higher is gray/black)
+#define DISPLAY_INTERVAL 250 // The number of milliseconds to wait before updating the LCD
 
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
@@ -34,7 +34,7 @@ void setup()
     delay(1000);                       // Wait one second for the user to remove their hand
     motors.setSpeeds(200, -200);       // Start turning to the right
     unsigned long calStart = millis(); // Save the time that the turn starts ("millis()" returns the # of milliseconds since the program started)
-    while (millis() - calStart < 1750) // Wait for a full turn to complete
+    while (millis() - calStart < 1750) // Wait for a full turn to complete ("millis() - calStart" is the # of milliseconds since the loop started. The loop should continue as long as this is less than 1750 - 1.75 seconds)
     {
         lineSensors.calibrate(); // Update the calibration based on the current data
     }
@@ -49,15 +49,15 @@ void setup()
 
     // This waits for the A button to be pressed, then moves forward off of the start square
     buttonA.waitForButton();
+    lcd.clear();                // Clear the previous message from the LCD
+    delay(1000);                // Wait one second for the user to remove their hand
     motors.setSpeeds(100, 100); // Start moving fowards slowly
-    while (true)                // Loop until interrupted
+    do                          // This "do-while" structure acts as a while loop, but runs the code inside first
     {
-        lineSensors.readCalibrated(sensorValues);                                                                        // Read the line sensor values and save to the array "sensorValues"
-        if (sensorValues[0] < WHITE_THRESHOLD || sensorValues[1] < WHITE_THRESHOLD || sensorValues[2] < WHITE_THRESHOLD) // Check for when one of the sensors sees white
-        {
-            break; // Exit the infinite loop
-        }
-    }
+        // This reads the line sensor values and saves them the array "sensorValues"
+        lineSensors.readCalibrated(sensorValues);
+    } while (sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD); // Keep looping as long as all of the sensors see white
+
     motors.setSpeeds(0, 0); // Stops the motors after leaving the start square
 
     // This saves the time that the robot left the start square
