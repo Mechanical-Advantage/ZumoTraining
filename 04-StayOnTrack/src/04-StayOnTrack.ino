@@ -95,7 +95,7 @@ void loop()
         lcd.print(sensorValues[2]); // Display the reading from the right sensor
     }
 
-    // Runs your code to udpate the motor speeds
+    // Runs your code to update the motor speeds
     lineFollow();
 }
 
