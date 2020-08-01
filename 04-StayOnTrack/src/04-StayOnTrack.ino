@@ -1,5 +1,9 @@
 #include <Zumo32U4.h>
 
+// These lines define two constants, which can be refered to in the code and never change. Making these values constants instead of including them directly in the code makes it easier to adjust them later.
+#define WHITE_THRESHOLD 150;  // The cutoff value for distinguising white (less than this value is white, higher is gray/black)
+#define DISPLAY_INTERVAL 250; // The number of milliseconds to wait before updating the LCD
+
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
 Zumo32U4LCD lcd;
@@ -48,8 +52,8 @@ void setup()
     motors.setSpeeds(100, 100); // Start moving fowards slowly
     while (true)                // Loop until interrupted
     {
-        lineSensors.readCalibrated(sensorValues);                                    // Read the line sensor values and save to the array "sensorValues"
-        if (sensorValues[0] < 150 || sensorValues[1] < 150 || sensorValues[2] < 150) // Check for when one of the sensors sees white
+        lineSensors.readCalibrated(sensorValues);                                                                        // Read the line sensor values and save to the array "sensorValues"
+        if (sensorValues[0] < WHITE_THRESHOLD || sensorValues[1] < WHITE_THRESHOLD || sensorValues[2] < WHITE_THRESHOLD) // Check for when one of the sensors sees white
         {
             break; // Exit the infinite loop
         }
@@ -67,11 +71,11 @@ void loop()
     lineSensors.readCalibrated(sensorValues);
 
     // This checks for the ending box and displays the final time
-    if (sensorValues[0] > 150 && sensorValues[1] > 150 && sensorValues[2] > 150) // Check when none of the sensors see white
+    if (sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD) // Check when none of the sensors see white
     {
         unsigned long endTime = millis(); // Save the ending time
         motors.setSpeeds(0, 0);           // Stop the motors
-        ledGreen(1);                      // Update the greenLED
+        ledGreen(1);                      // Update the green LED
         lcd.clear();
         lcd.print("Time");
         lcd.gotoXY(0, 1);
@@ -84,7 +88,7 @@ void loop()
     }
 
     // This displays the current line sensor readings
-    if (millis() - lastDisp > 250) // Only update if more than 250 ms since last update
+    if (millis() - lastDisp > DISPLAY_INTERVAL) // Only update if enough time has passed since last update
     {
         lastDisp = millis(); // Update time of last update
         lcd.clear();
@@ -102,4 +106,16 @@ void loop()
 // Runs in "loop" to update the motor speeds. Add your line following code here.
 void lineFollow()
 {
+    // Here, you should read the line sensor values and update the motor speeds accordingly.
+    // You can see examples of reading each sensor value on lines 95-99
+
+    // This is a simple example that runs as long as the center sensor is on the line:
+    // if (sensorValues[1] > WHITE_THRESHOLD) // True if on gray/black, false if on white
+    // {
+    //     motors.setSpeeds(200, 200);
+    // }
+    // else
+    // {
+    //     motors.setSpeeds(0, 0);
+    // }
 }
