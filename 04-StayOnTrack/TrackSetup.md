@@ -4,6 +4,6 @@ The track you will use to complete challenge #3 is built from modular sections. 
 
 ![Track layout diagram](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/04-finaldesign.jpg)
 
-We have a PDF ([Click here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/04-printout.pdf)) you can print out to get all of the necessary track sections. **Make sure you print out the PDF at 100% scale**, so that the pieces are the correct size.
+We have a PDF ([Click here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/04-printout.pdf)) that you can print out to get all of the necessary track sections. **Make sure you print out the PDF at 100% scale**, so that the pieces are the correct size.
 
 You can attach the pieces together any way you see fit (taping together, gluing to a large board, etc.). Make sure that the robot can run smoothly from one section to the next. We found it useful to stick a long piece of clear tape along the borders to remove the gaps.
