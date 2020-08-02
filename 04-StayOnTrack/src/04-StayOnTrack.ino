@@ -1,6 +1,6 @@
 #include <Zumo32U4.h>
 
-// These lines define two constants, which can be refered to in the code and never change. Making these values constants instead of including them directly in the code makes it easier to adjust them later.
+// These lines define two constants, which can be referred to in the code and never change. Making these values constants instead of including them directly in the code makes it easier to adjust them later.
 #define WHITE_THRESHOLD 150  // The cutoff value for distinguising white (less than this value is white, higher is gray/black)
 #define DISPLAY_INTERVAL 250 // The number of milliseconds to wait before updating the LCD
 
