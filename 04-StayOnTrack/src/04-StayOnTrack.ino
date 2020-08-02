@@ -6,9 +6,11 @@
 
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
+Zumo32U4ButtonB buttonB;
 Zumo32U4LCD lcd;
 Zumo32U4LineSensors lineSensors;
 
+bool enableTimer;             // Whether to stop when the robot reaches the end
 unsigned long startTime;      // The time the robot started line following
 unsigned long lastDisp = 0;   // The last time the LCD was updated
 unsigned int sensorValues[3]; // The current readings from the line sensors
@@ -43,12 +45,26 @@ void setup()
 
     // This updates the LCD post-calibration
     lcd.clear();
-    lcd.print("Press A");
+    lcd.print("A=timer");
     lcd.gotoXY(0, 1);
-    lcd.print("to start");
+    lcd.print("B=test");
 
-    // This waits for the A button to be pressed, then moves forward off of the start square
-    buttonA.waitForButton();
+    // This waits for the A button or B button to be pressed, then saves whether to enable the timer
+    while (true) // Loop until interrupted
+    {
+        if (buttonA.getSingleDebouncedPress()) // Run if button A has been pressed and released
+        {
+            enableTimer = true; // Mark the timer as "enabled" - the robot will stop at the gray square
+            break;              // Exit the loop
+        }
+        if (buttonB.getSingleDebouncedPress()) // Run if button B has been pressed and released
+        {
+            enableTimer = false; // Mark the timer as "disabled" - the robot will not stop at the gray square
+            break;               // Exit the loop
+        }
+    }
+
+    // This updates the LCD and runs until the robot leaves the gray square
     lcd.clear();                // Clear the previous message from the LCD
     delay(1000);                // Wait one second for the user to remove their hand
     motors.setSpeeds(100, 100); // Start moving fowards slowly
@@ -71,7 +87,7 @@ void loop()
     lineSensors.readCalibrated(sensorValues);
 
     // This checks for the ending box and displays the final time
-    if (sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD && millis() - startTime > 3000) // Check when none of the sensors see white and at least 3 seconds have passed
+    if (enableTimer && millis() - startTime > 3000 && sensorValues[0] > WHITE_THRESHOLD && sensorValues[1] > WHITE_THRESHOLD && sensorValues[2] > WHITE_THRESHOLD) // If timer enabled, check when none of the sensors see white and at least 3 seconds have passed
     {
         unsigned long endTime = millis(); // Save the ending time
         motors.setSpeeds(0, 0);           // Stop the motors
