@@ -123,7 +123,7 @@ void loop()
 void lineFollow()
 {
     // Here, you should read the line sensor values and update the motor speeds accordingly.
-    // You can see examples of reading each sensor value on lines 95-99
+    // You can see examples of reading each sensor value on lines 111-115
 
     // This is a simple example that runs as long as the center sensor is on the line:
     // if (sensorValues[1] > WHITE_THRESHOLD) // True if on gray/black, false if on white

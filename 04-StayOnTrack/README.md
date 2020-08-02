@@ -28,13 +28,13 @@ If you need assistance with anything (even if you just don't know where to start
 
 ![Picture of start location](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/04-startpos.jpg)
 
-5. Try moving the robot around the line and observe the readings from the three line sensors. The two values on the top row show the left and right sensors and the value on the bottom row shows the center sensor (this is because the three values don't fit on one row). You can find these sensors under the robot on the front sensor array, seen here:
+5. Try moving the robot around the line and observe the readings from the three line sensors, displayed on the LCD. The two values on the top row show the left and right sensors and the value on the bottom row shows the center sensor (this is because the three values don't fit on one row). You can find these sensors under the robot on the front sensor array, seen here:
 
 ![Diagram of line sensor locations](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/04-sensors.jpg)
 
 6. In addition to the "testing" mode you've been using, the template has a "timing" mode (which you can activate by pressing A instead of B). This behaves identically except that when the robot reaches the ending gray square it will stop and display the number of seconds since it left the first gray square. Eventually, you will use this mode to test the speed of your line following algorithms. Feel free to continue using the "testing" mode while developing.
 
-5. Read through the template code and try to understand what everything does. This template is significantly more complex that previous challenges, but the most important piece is the "lineFollow" function at the bottom. This function is run as part of the loop and is where you should place your code for the line follower. The three sensor values are stored in the array "sensorValues" - you can see an example of how to read each sensor on lines 95-99. If necessary, we recommend checking out these tutorials on [arrays](https://www.learn-c.org/en/Arrays) and [functions](https://www.learn-c.org/en/Functions).
+5. Read through the template code and try to understand what everything does. This template is significantly more complex that previous challenges, but the most important piece is the "lineFollow" function at the bottom. This function is run as part of the loop and is where you should place your code for the line follower. The three sensor values are stored in the array "sensorValues" - you can see an example of how to read each sensor on lines 111-115. If necessary, we recommend checking out these tutorials on [arrays](https://www.learn-c.org/en/Arrays) and [functions](https://www.learn-c.org/en/Functions).
 
 5. First, implement a very simple line follower using the left and right sensors. When the robot detects a line on the left or right sides, it should stop and turn slightly to correct. Try running this system several times. How well does it work? What can cause it to fail to track the line?
 
