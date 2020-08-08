@@ -2,7 +2,7 @@
 
 ## Overview
 
-This challenge will introduce another of the Zumo's many components - the line sensors! Using the line sensors, you will experiment with various methods of making the Zumo follow a line. Then, we will have a friendly competition to see who can create the fastest line follower!
+In this challenge, you will use the Zumo's gyro sensor to allow it to maintain orientation as a surface rotates underneath it. This will utilize some of the control loop concepts covered in previous challenges.
 
 ## Support
 
