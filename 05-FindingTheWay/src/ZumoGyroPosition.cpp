@@ -6,12 +6,12 @@ This code is responsible for reading the Zumo's position using the gyro sensor. 
 
 #include "ZumoGyroPosition.h"
 
-void ZumoGyroPosition::setup(bool g)
+void ZumoGyroPosition::setup(bool i)
 {
     Wire.begin();
     a.init();
     a.enableDefault();
-    if (g)
+    if (i)
     {
         cli();
         TCCR3A = 0;
@@ -22,17 +22,16 @@ void ZumoGyroPosition::setup(bool g)
         TIMSK3 |= (1 << OCIE3A);
         sei();
     }
-    unsigned long h = millis();
-    while (millis() - h < 4000)
+    unsigned long j = millis();
+    while (millis() - j < 5000)
     {
         a.read();
         c += 1;
         d += a.g.z;
-        if (millis() - h > 1000 && abs(a.g.z - (d / c)) > 200)
+        if (millis() - j > 1000)
         {
-            h = millis();
-            d = 0;
-            c = 0;
+            e += 1;
+            f += abs(a.g.z - ((double)d / (double)c));
         }
     }
     b = true;
@@ -44,21 +43,21 @@ void ZumoGyroPosition::update()
     {
         return;
     }
-    if (e == NULL)
+    if (g == NULL)
     {
-        e = micros();
+        g = micros();
     }
     interrupts();
     a.read();
-    unsigned long i = micros();
-    double j = a.g.z - ((double)d / (double)c);
-    if (abs(j) < 30)
+    unsigned long k = micros();
+    double l = a.g.z - ((double)d / (double)c);
+    if (abs(l) < (f / (double)e) * 3.5)
     {
-        j = 0;
+        l = 0;
     }
-    j /= -117.69;
-    double k = (double)(i - e) / 1000000;
-    angle += (j * k) - ((j - f) * k * 0.5);
-    e = i;
-    f = j;
+    l /= -117.69;
+    double m = (double)(k - g) / 1000000;
+    angle += (l * m) - ((l - h) * m * 0.5);
+    g = k;
+    h = l;
 }

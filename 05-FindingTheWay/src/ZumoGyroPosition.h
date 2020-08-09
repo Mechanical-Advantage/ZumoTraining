@@ -7,8 +7,10 @@ class ZumoGyroPosition
     bool b = false;
     int c;
     int32_t d;
-    unsigned long e;
-    double f = 0;
+    int e;
+    double f;
+    unsigned long g;
+    double h = 0;
 
 public:
     volatile double angle = 0;
