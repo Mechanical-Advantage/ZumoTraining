@@ -28,7 +28,7 @@ void ZumoGyroPosition::setup(bool g)
         a.read();
         c += 1;
         d += a.g.z;
-        if (millis() - h > 1000 && abs(a.g.z - (d / c)) > 100)
+        if (millis() - h > 1000 && abs(a.g.z - (d / c)) > 200)
         {
             h = millis();
             d = 0;
