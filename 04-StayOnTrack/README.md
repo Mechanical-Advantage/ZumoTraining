@@ -1,4 +1,4 @@
-# Challenge #4: Stay On Track
+# Challenge #4: Stay on Track
 
 ## Video Overview: [Click Here](https://drive.google.com/file/d/1QB5DItAjAyKC4624yk5-UHz8wdr-mxJM/view?usp=sharing)
 
