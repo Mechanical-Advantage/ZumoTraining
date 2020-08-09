@@ -1,5 +1,9 @@
 # Challenge #5: Finding the Way
 
+## Video Overview: [Click Here](https://drive.google.com/file/d/1-_qQks3KJQ4R6oDC-XLz-O8MDklHY1hW/view?usp=sharing)
+
+You may not be able to play the video in Google Chrome. Please use another browser (Microsoft Edge, Firefox, Safari, etc.) if you encounter issues.
+
 ## Overview
 
 In this challenge, you will use the Zumo's gyro sensor to allow it to maintain orientation as a surface rotates underneath it. This will utilize some of the control loop concepts covered in previous challenges.
