@@ -30,7 +30,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 5. One of the key ways we can debug the Arduino (or an FRC robot :wink:) is by logging data to the computer. On the Arduino, that can be done via a serial connection where, in this case, the Zumo sends data to the computer over USB. You can use the function `Serial.println();` to send one line back to the computer (this can be a string, integer, double, etc). To view this data, you can use the serial monitor (which displays the raw text) or the serial plotter (which graphs numbers). We have instructions for opening each of these interfaces at the end of the VSCode set up instructions for [Mac](https://docs.google.com/presentation/d/1cyeOuGeWGI4tj6PQgyC6Zz0o6Nv5z3nh0UwPVeGp7-I/edit?usp=sharing) or [Windows](https://docs.google.com/presentation/d/1y6T2atl-b8Y2t-8qAfPKwe7EO9_AVQGZKfdK217bZew/edit?usp=sharing). You should adjust the template code so that the gyro angle is logged over serial whenever the LCD is updated. Then, confirm that you can see these values through both the serial monitor and serial plotter.
 
-6. Your goal is to use the gyro sensor to keep the robot pointed in the same direction as a surface rotates underneath it. Here are some ideas for ways to create a rotating surface:
+6. Your goal is to use the gyro sensor to keep the robot pointed in the same direction as a surface rotates underneath it. You can look at [this video](https://drive.google.com/file/d/1zA_oJKcpg_WLG5TJnbrGHUP2EvaXy44P/view?usp=sharing) to get an idea of what it should look like. Here are some ideas for ways to create a rotating surface:
 
     * Use a lazy susan, which is designed to spin easily. This option is ideal if you have one available.
 
