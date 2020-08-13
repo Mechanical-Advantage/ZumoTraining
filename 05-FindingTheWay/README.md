@@ -40,6 +40,6 @@ If you need assistance with anything (even if you just don't know where to start
 
 7. As the surface moves, the robot should respond quickly and avoid oscillation. You should check how well your solution works by looking at the serial plotter - does it accurately and precisely stay pointed in the target direction, even while the surface is in motion? Can you get it to end within 0.25° of the target direction? Try moving the surface very quickly or reversing direction suddenly and see how you can improve the robot's performance.
 
-7. Upload a video of the Zumo completing the challenge to Slack *along with a screenshot of the graph from the serial plotter*.
+8. Upload a video of the Zumo completing the challenge to Slack *along with a screenshot of the graph from the serial plotter*.
 
 **Remember, if you are stuck please ask for assistance on Slack or during office hours.**
