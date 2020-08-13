@@ -16,7 +16,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * The data in the protocol is encoded using binary. If you are unfamiliar with binary and want an introduction, we suggest watching [this video](https://www.youtube.com/watch?v=ku4KOFQ-bB4). The data from the remote is constructed of 4 bytes with 8 bits each.
 
-* The template makes use of several enumerations. If you are unfamiliar with enums, you should read through [this tutorial](https://www.programiz.com/c-programming/c-enumeration).
+* The template makes use of several switch statements and enumerations. If you are unfamiliar with either of these concepts, you should read through these tutorials on [switch statements](https://www.tutorialspoint.com/cprogramming/switch_statement_in_c.htm) and/or [enumerations](https://www.programiz.com/c-programming/c-enumeration).
 
 ## Challenge
 
@@ -24,7 +24,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 2. Open this *folder* in VSCode, then click on "06-FollowingOrders.ino". On Mac, click "Win32" in the lower right corner and change your configuration to "Mac"
 
-3. Read through the template to understand the structure. This template makes use of a state machine - throughout reading the message from the remote, it moves through 6 states - Idle, Lead, LeadComplete, WaitForDataOff, WaitForDataOn, and MessageComplete. Each of these states is accompanied by different logic to interpret the signal from the remote and move to the next state when approproiate. The loop reads the current remote signal and enters a "switch" statement, where a set of code is run based on the current state. This code can choose to call "setState" to update the current state (which also records the time at which the state changed). Please reference the following diagram to check how the program is intended to move between the 6 states:
+3. Read through the template to understand the structure. This template makes use of a state machine - throughout reading the message from the remote, it moves through 6 states - Idle, Lead, LeadComplete, WaitForDataOff, WaitForDataOn, and MessageComplete. Each of these states is accompanied by different logic to interpret the signal from the remote and move to the next state when approproiate. The loop reads the current remote signal and enters a switch statement, where a set of code is run based on the current state. This code can choose to call "setState" to update the current state (which also records the time at which the state changed). Please reference the following diagram to check how the program is intended to move between the 6 states:
 
 ![State flow chart](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/06-statediagram.jpg)
 
