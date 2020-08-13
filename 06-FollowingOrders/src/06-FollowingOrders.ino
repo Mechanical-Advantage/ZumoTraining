@@ -41,13 +41,14 @@ enum State
     MessageComplete // The message is complete, look for repeat signals
 };
 
+unsigned long now;             // The time (in microseconds) that the last measurement was taken
 unsigned long stateChangeTime; // The last time (in microseconds) that the state changed
 State state = Idle;            // The current state - this is of type "State", referencing the enum above
 int readPosition = 0;          // The current bit being read from 0 to 31
-int address1 = 0;              // Message byte 1/4 - this should always be 0
-int address2 = 0;              // Message byte 2/4 - this should always be 191 (this doesn't follow the standard NEC protocol)
-int message1 = 0;              // Message byte 3/4 - this indicates which command is being sent (as seen in the "Command" enum)
-int message2 = 0;              // Message byte 4/4 - this is the logical inverse of "message1", meaning it should equal "255 - message1"
+unsigned char address1 = 0;    // Message byte 1/4 - this should always be 0
+unsigned char address2 = 0;    // Message byte 2/4 - this should always be 191 (this doesn't follow the standard NEC protocol)
+unsigned char message1 = 0;    // Message byte 3/4 - this indicates which command is being sent (as seen in the "Command" enum)
+unsigned char message2 = 0;    // Message byte 4/4 - this is the logical inverse of "message1", meaning it should equal "255 - message1"
 
 // This function is run once, when the Zumo starts up
 void setup()
@@ -62,8 +63,21 @@ void setup()
 // This function can be used to update the state
 void setState(State newState)
 {
-    state = newState;           // Update the state
-    stateChangeTime = micros(); // Save the time the state changed
+    state = newState;      // Update the state
+    stateChangeTime = now; // Save the time the state changed
+}
+
+// This functions sets a specific bit in "var" at position "pos" (where 0 is the least significant bit)
+void writeBit(unsigned char &var, int pos, bool value)
+{
+    if (value)
+    {
+        var |= (1 << pos); // Modifies a single bit to be positive (we can discuss how this works in more detail for those interested!)
+    }
+    else
+    {
+        var &= ~(1 << pos); // Modifies a single bit to be negative (we can discuss how this works in more detail for those interested!)
+    }
 }
 
 void loop()
@@ -74,8 +88,8 @@ void loop()
     // This sets the yellow LED based on whether a pulse was detected.
     ledYellow(activated ? 1 : 0);
 
-    // This records the time at which the measurement was taken, so that is remains constant throughout the processing logic. You can get the time since the state changed with the expression "now - stateChangeTime"
-    unsigned long now = micros();
+    // This records the time at which the measurement was taken, so that it remains constant throughout the processing logic. You can get the time since the state changed with the expression "now - stateChangeTime"
+    now = micros();
 
     // This switch statement run different code depending on the current state. The "break" at the end of each "case" prevents other cases from running.
     switch (state)
@@ -115,7 +129,7 @@ void loop()
     case WaitForDataOn: // A message pulse has ended, wait for the next one
         if (activated)
         {
-            // ADD CODE HERE - The next pulse was detected, meaning we can record one bit! Update the address/message variables and change the state.
+            // ADD CODE HERE - The next pulse was detected, meaning we can record one bit! First, use the timing since the last pulse to determine if it is a "1" or "0". Then, write that bit to the correct position in one of the address/message bytes using the "writeBit" function. Finally, move to the next state.
         }
         else if (now - stateChangeTime > 2000)
         {
@@ -126,7 +140,7 @@ void loop()
     case MessageComplete: // The message is complete, look for repeat signals
         if (activated)
         {
-            // ADD CODE HERE - A repeat pulse was detected, update the state to "MessageComplete" to reset the state change time
+            // ADD CODE HERE - A repeat pulse was detected, update the state to "MessageComplete" to reset the state change time.
         }
         else if (now - stateChangeTime > 200000)
         {
@@ -135,10 +149,13 @@ void loop()
     }
 }
 
-// This function should be run once a command is complete, and should update motors, LEDs, etc. based on said command
+// This function should be run once a command is complete, and should update motors, LEDs, etc. based on said command. The first argument is of type "Command" - an enum. You can convert to this type with the syntax "(Command)message1"
 void runCommand(Command command)
 {
-    // ADD CODE HERE
+    switch (command)
+    {
+        // ADD CODE HERE
+    }
 }
 
 // This function should be run when a message ends to reset motors, LEDs, etc.
