@@ -1,4 +1,4 @@
-# Challenge #5: Following Orders
+# Challenge #6: Following Orders
 
 ## Overview
 
@@ -16,7 +16,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * The data in the protocol is encoded using binary. If you are unfamiliar with binary and want an introduction, we suggest watching [this video](https://www.youtube.com/watch?v=ku4KOFQ-bB4). The data from the remote is constructed of 4 bytes with 8 bits each.
 
-* The template makes use of several switch statements and enumerations. If you are unfamiliar with either of these concepts, you should read through these tutorials on [switch statements](https://www.tutorialspoint.com/cprogramming/switch_statement_in_c.htm) and/or [enumerations](https://www.programiz.com/c-programming/c-enumeration).
+* The template makes use of several switch statements and enumerations (enums). If you are unfamiliar with either of these concepts, you should read through these tutorials on [switch statements](https://www.tutorialspoint.com/cprogramming/switch_statement_in_c.htm) and/or [enumerations](https://www.programiz.com/c-programming/c-enumeration).
 
 ## Challenge
 
