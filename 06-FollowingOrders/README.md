@@ -4,9 +4,11 @@
 
 In this challenge, you will use the proximity sensors for a different purpose - remote control! Without the IR emitters, the sensors can be used to receive commands from your remote control, allowing you to drive the robot with it.
 
+*Disclaimer - This challenge is significantly more difficult than the work we've done previously. We recommend making use of the introduction meeting to ask questions and get detailed explanations of the many components involved in the challenge.*
+
 ## Support
 
-If you need assistance with anything (even if you just don't know where to start), **please** contact any of us via Slack publicly or privately. You can also meet with us via Zoom during our "office hours." These hours are listed in a pinned post on Slack.
+If you need assistance with anything (even if you just don't know where to start), **please** contact any of us via Slack publicly or privately. You can also meet with us during our "office hours." These hours are listed in a pinned post on Slack.
 
 ## Prerequisites
 
@@ -32,7 +34,21 @@ We can also overlay these states on a timeline of how the pulse are sent:
 
 ![Timeline of state changes](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/06-timeline.jpg)
 
-4. While the template includes the general structure of a state machine, it does not have the code to be run in each state. Your challenge is to complete the template program based on the above diagrams, so that the Zumo can interpret commands from the remote. At a minimum, it should be able to drive forwards, backwards, turn left, and turn right using the arrow buttons. Feel free to add more commands if you like!
+4. While the template includes the general structure of a state machine, it does not have the code to be run in each state. Your challenge is to complete the template program based on the above diagrams, so that the Zumo can interpret commands from the remote. At a minimum, it should be able to drive forwards, backwards, turn left, and turn right using the arrow buttons. Feel free to add more commands if you like! Please refer to the following table for a list of possible commands:
+
+    Button | Message Number | Button | Message Number
+    --- | --- | --- | ---
+    Volume Down | `0` | Return | `14`
+    Play/Pause | `1` | One | `16`
+    Volume Up | `2` | Two | `17`
+    Setup | `4` | Three | `18`
+    Up Arrow | `5` | Four | `20`
+    Stop/Mode | `6` | Five | `21`
+    Left Arrow | `8` | Six | `22`
+    Enter/Save | `9` | Seven | `24`
+    Right Arrow | `10` | Eight | `25`
+    Zero/Ten | `12` | Nine | `26`
+    Down Arrow | `13`
 
 5. If you've added all of the code but find that the robot isn't doing what you expect, you might need to do some debugging. Unfortunately, programs like this can be difficult to debug in real time because the important logic happens very quickly (under 100ms)! Instead, you can log data or state changes over serial as they happen and review them after, making sure everything happened in the right order and looks as you expected. In this case, we'd recommend you use the serial monitor rather than the serial plotter and log lines of text at various points in the program. Remember that you can send data over serial with the function `Serial.println("Hello world");`
 

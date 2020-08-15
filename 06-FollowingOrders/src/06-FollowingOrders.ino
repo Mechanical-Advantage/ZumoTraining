@@ -4,32 +4,6 @@ Zumo32U4ProximitySensors proxSensors;
 Zumo32U4Motors motors;
 Zumo32U4LCD lcd;
 
-// This enum contains all of the possible commands from the remote. The value of each item is the number received from the remote.
-enum Command
-{
-    VolDown = 0,
-    Pause = 1,
-    VolUp = 2,
-    Setup = 4,
-    Up = 5,
-    Stop = 6,
-    Left = 8,
-    Enter = 9,
-    Right = 10,
-    Num0 = 12,
-    Down = 13,
-    Return = 14,
-    Num1 = 16,
-    Num2 = 17,
-    Num3 = 18,
-    Num4 = 20,
-    Num5 = 21,
-    Num6 = 22,
-    Num7 = 24,
-    Num8 = 25,
-    Num9 = 26
-};
-
 // This enum contains the states we move through as the message is processed.
 enum State
 {
@@ -149,11 +123,15 @@ void loop()
     }
 }
 
-// This function should be run once a command is complete, and should update motors, LEDs, etc. based on said command. The first argument is of type "Command" - an enum. You can convert to this type with the syntax "(Command)message1"
-void runCommand(Command command)
+// This function should be run once a command is complete, and should update motors, LEDs, etc. based on said command.
+void runCommand(int command)
 {
     switch (command)
     {
+    case 9: // Turn on red LED when "Enter/Save" is pressed
+        ledRed(1);
+        break;
+
         // ADD CODE HERE
     }
 }
@@ -161,5 +139,6 @@ void runCommand(Command command)
 // This function should be run when a message ends to reset motors, LEDs, etc.
 void goIdle()
 {
+    ledRed(0);
     // ADD CODE HERE
 }
