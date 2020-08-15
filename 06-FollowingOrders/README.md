@@ -12,7 +12,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have completed all previous challenges - this challenge builds off what you have previously learned.
 
-* To read commands from the remote control, you need to understand how they are encoded. This remote uses the NEC encoding type, where commands are sent as a series of short pulses. You should read through [this article](https://techdocs.altium.com/display/FPGA/NEC+Infrared+Transmission+Protocol), which provides a good overview of how the commands are structured. Note that "µs" stands for microsecond (1/1000th of a millisecond).
+* To read commands from the remote control, you need to understand how they are sent. You should read through [this introduction to IR transmission](https://www.circuitbasics.com/arduino-ir-remote-receiver-tutorial/) (reading down to, but not including "How to Connect An IR Receiver to Arduino"). This remote uses the NEC encoding type, where commands are sent as a series of short pulses. You should also read through [this explanation of the NEC transmission protocol](https://techdocs.altium.com/display/FPGA/NEC+Infrared+Transmission+Protocol). Note that "µs" stands for microsecond (1/1000th of a millisecond).
 
 * The data in the protocol is encoded using binary. If you are unfamiliar with binary and want an introduction, we suggest watching [this video](https://www.youtube.com/watch?v=ku4KOFQ-bB4). The data from the remote is constructed of 4 bytes with 8 bits each.
 
