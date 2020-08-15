@@ -10,7 +10,7 @@ When starting in a new environment, programmers will often create a "Hello world
 
 ## Support
 
-If you need assistance with anything (even if you just don't know where to start), **please** contact any of us via Slack publicly or privately. You can also meet with us via Zoom during our "office hours." These hours are listed in a pinned post on Slack.
+If you need assistance with anything (even if you just don't know where to start), **please** contact any of us via Slack publicly or privately. You can also meet with us during our "office hours." These hours are listed in a pinned post on Slack.
 
 ## Prerequisites
 
