@@ -28,11 +28,11 @@ If you need assistance with anything (even if you just don't know where to start
 
 3. Read through the template to understand the structure. This template makes use of a state machine - throughout reading the message from the remote, it moves through 6 states - Idle, Lead, LeadComplete, WaitForDataOff, WaitForDataOn, and MessageComplete. Each of these states is accompanied by different logic to interpret the signal from the remote and move to the next state when approproiate. The loop reads the current remote signal and enters a switch statement, where a set of code is run based on the current state. This code can choose to call "setState" to update the current state (which also records the time at which the state changed). Please reference the following diagram to check how the program is intended to move between the 6 states:
 
-![State flow chart](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/06-statediagram.jpg)
+![State flow chart](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/06-statediagram.jpg)
 
 We can also overlay these states on a timeline of how the pulse are sent:
 
-![Timeline of state changes](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/06-timeline.jpg)
+![Timeline of state changes](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/06-timeline.jpg)
 
 4. While the template includes the general structure of a state machine, it does not have the code to be run in each state. Your challenge is to complete the template program based on the above diagrams, so that the Zumo can interpret commands from the remote. At a minimum, it should be able to drive forwards, backwards, turn left, and turn right using the arrow buttons. Feel free to add more commands if you like! Please refer to the following table for a list of possible commands:
 
