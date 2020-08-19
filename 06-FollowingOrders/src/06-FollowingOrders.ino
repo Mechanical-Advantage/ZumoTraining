@@ -124,7 +124,7 @@ void loop()
 }
 
 // This function should be run once a command is complete, and should update motors, LEDs, etc. based on said command.
-void runCommand(int command)
+void runCommand(unsigned char command)
 {
     switch (command)
     {
