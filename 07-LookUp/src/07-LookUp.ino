@@ -30,7 +30,7 @@ void loop()
     accel.readAcc();
 
     // This waits 50 milliseconds to intentionally slow down the control loop
-    delay(50);
+    delay(50); // DO NOT REMOVE
 
     // This logs the current accelerometer values, comma separated. This means they can be viewed as separate series in the serial plotter.
     Serial.print(accel.a.x); // Log the x acceleration (left-right)
