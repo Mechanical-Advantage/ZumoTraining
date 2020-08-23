@@ -19,8 +19,11 @@ void setup()
     // This clears the LCD (in case something was already on the screen when the program starts)
     lcd.clear();
 
-    // This waits until the A button is pressed
+    // This waits until the A button is pressed, updating the LCD accordingly
+    lcd.clear();
+    lcd.print("Press A");
     buttonA.waitForButton();
+    lcd.clear();
 }
 
 // This function contains code to be run continuously - it is looped until the Zumo shuts down or is reset
