@@ -6,8 +6,6 @@ Zumo32U4ButtonA buttonA;
 Zumo32U4LCD lcd;
 LSM303 accel;
 
-unsigned long lastDisp = 0; // The last time the LCD was updated
-
 // This function is run once, when the Zumo starts up
 void setup()
 {
