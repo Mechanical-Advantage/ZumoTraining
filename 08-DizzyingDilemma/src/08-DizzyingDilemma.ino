@@ -78,5 +78,5 @@ void loop()
 // This function should update the "angle" variable based on the current angular velocity
 void updateAngle(double dps)
 {
-    // ADD CODE HERE
+    angle += 0; // ADD CODE HERE
 }
