@@ -40,6 +40,8 @@ If you need assistance with anything (even if you just don't know where to start
 
     ![velocity * Δtime = Δposition](https://latex.codecogs.com/gif.latex?\fn_phv&space;velocity*\Delta&space;time=\Delta&space;position)
 
+    *(This code is not especially complicated. If you have more than ~3 lines, you should try to simplify.)*
+
 7. Once you've gotten the code to update the angle, you may notice a new problem - drift! :rage: Think back to what the gyro was reading while the robot was stationary. How could you correct for that to reduce the drift?
 
 8. Upload a video to Slack of the Zumo remaining stationary on a rotating surface (you can use the same setup as [challenge 5](https://github.com/Mechanical-Advantage/Training2020/tree/master/05-FindingTheWay)).
