@@ -1,7 +1,8 @@
 #include <Wire.h>
 #include <Zumo32U4.h>
 
-#define DISPLAY_INTERVAL 100 // The number of milliseconds to wait before updating the LCD
+#define DISPLAY_INTERVAL 100 // The number of milliseconds to wait before updating the LCD and logging to serial
+#define PROPORTIONAL_GAIN 30 // The gain to use when correcting to 0°
 
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
@@ -49,24 +50,26 @@ void loop()
     // This converts the gyro reading to degrees per second (dps)
     double dps = gyro.g.z / -114.0;
 
-    // This logs the current gyro value over serial
-    Serial.println(dps);
-
     // This update the current angle based on the user's logic
     updateAngle(dps);
 
-    // This displays the current calculated angle
+    // This displays the current calculated angle and logs the angular velocty over serial
     if (millis() - lastDisp > DISPLAY_INTERVAL) // Only update if enough time has passed since last update
     {
         lastDisp = millis(); // Update time of last update
+
+        // This updates the angle on the LCD
         lcd.clear();
         lcd.print(angle);
+
+        // This logs the current gyro value over serial
+        Serial.println(dps);
     }
 
     // Run the proportional control system to bring the robot to 0° (if applicable)
     if (runProportional)
     {
-        int turnSpeed = angle * 30;                  // Calculate turn speed using proportional control
+        int turnSpeed = angle * PROPORTIONAL_GAIN;   // Calculate turn speed using proportional control
         motors.setSpeeds(turnSpeed * -1, turnSpeed); // Run at calculated speed
     }
     else if (buttonA.isPressed()) // When the A button is pressed, enable the proportional control system

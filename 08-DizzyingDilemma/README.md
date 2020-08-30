@@ -18,7 +18,7 @@ If you need assistance with anything (even if you just don't know where to start
 
     1. [This video](https://www.youtube.com/watch?v=DxJMDJSorMQ) explains how to find displacement (change in position) from velocity graph.
 
-    2. [This video](https://www.youtube.com/watch?v=Ka9xWAmWBow) shows a more advanced example of calculating displacement.
+    2. [This video](https://www.youtube.com/watch?v=Ka9xWAmWBow) shows a more advanced example of calculating displacement. Note that at 6:23, he calculates the velocity as "-0.9999..." while it should be "-0.8889..."
 
     3. [This video](https://www.youtube.com/watch?v=vPhwP-w5tUU) explains how to create a full position graph (very similar to what we're aiming for) from a velocity graph.
 
