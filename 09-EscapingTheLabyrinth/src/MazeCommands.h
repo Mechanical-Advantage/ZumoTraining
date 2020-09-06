@@ -191,7 +191,7 @@ int followToTurn()
                 break;
             }
         }
-        else // No intersection detected yet, line following
+        else // No intersection detected yet, line follow
         {
             if (millis() - startTime < FOLLOW_MIN_TIME)
             {
@@ -204,7 +204,7 @@ int followToTurn()
             }
             else if (avgSensorValues[0] > WHITE_THRESHOLD || avgSensorValues[4] > WHITE_THRESHOLD) // The left or right sensor sees a line, so start centering on the intersection
             {
-                // Go directly foward, stop line following
+                // Go directly forward, stop line following
                 motors.setSpeeds(BASE_SPEED, BASE_SPEED);
 
                 // Reset the encoders
