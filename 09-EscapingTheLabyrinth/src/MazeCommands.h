@@ -27,7 +27,7 @@ unsigned int sensorValues[5];
 bool finished = false; // Whether the finish has been detected (never reset)
 
 // Cardinal directions (which are read using the gyro sensor)
-enum Direction
+enum CardinalDirection
 {
     North = 1,
     East = 2,
@@ -38,10 +38,10 @@ enum Direction
 // Relative directions (which are based on the current gyro value)
 enum RelativeDirection
 {
-    Left = -90,
-    Forward = 0,
-    Right = 90,
-    Backward = 180
+    Forward = 16,
+    Right = 32,
+    Backward = 64,
+    Left = 128
 };
 
 // Calibrates the line sensors and gyro sensor (should be placed over the calibration area and not moved)
@@ -78,10 +78,31 @@ double simplifyAngle(double angle)
 }
 
 // Utility function for determing cardinal direction from a relative direction
-Direction getDirection(RelativeDirection relativeDirection)
+CardinalDirection getCardinalDirection(RelativeDirection relativeDirection)
 {
-    // Calculate the angle for the specific relative direction
-    double angle = simplifyAngle(gyro.angle + relativeDirection);
+    // Find the correct relative angle
+    int relativeAngle;
+    switch (relativeDirection)
+    {
+    case Forward:
+        relativeAngle = 0;
+        break;
+
+    case Right:
+        relativeAngle = 90;
+        break;
+
+    case Backward:
+        relativeAngle = 180;
+        break;
+
+    case Left:
+        relativeAngle = -90;
+        break;
+    }
+
+    // Calculate the angle for the specified relative direction
+    double angle = simplifyAngle(gyro.angle + relativeAngle);
 
     // Find the nearest cardinal direction
     if (angle > -45 && angle <= 45)
@@ -102,13 +123,13 @@ Direction getDirection(RelativeDirection relativeDirection)
     }
 }
 
-// Follows a line until it finds an intersection or dead end, then returns which cardinal directions are available
+// Follows a line until it finds an intersection or dead end, then returns which directions are available (cardinal and relative)
 int followToTurn()
 {
-    int availableDirections = 0;        // Tracks all available directions (to be updated as directions are confirmed)
-    bool scanningIntersection = false;  // Whether the robot is current moving straight forwards to scan an intersection
-    unsigned long startTime = millis(); // The time (ms) that line following started
-    int sensorHistory[5][SENSOR_HISTORY_LENGTH];
+    int availableDirections = 0;                 // Tracks all available directions (to be updated as directions are confirmed)
+    bool scanningIntersection = false;           // Whether the robot is current moving straight forwards to scan an intersection
+    unsigned long startTime = millis();          // The time (ms) that line following started
+    int sensorHistory[5][SENSOR_HISTORY_LENGTH]; // The sensor history for averaging over a series of measurements
 
     // Initialize sensor history to all -1s, to keep track of which values are recorderd
     int sensorIndex;
@@ -158,16 +179,18 @@ int followToTurn()
 
         if (scanningIntersection) // Currently moving fowards to center over the intersection
         {
-            // If a line is seen on the left side, mark the appropriate cardinal direction as available
+            // If a line is seen on the left side, mark the appropriate directions as available
             if (avgSensorValues[0] > WHITE_THRESHOLD)
             {
-                availableDirections |= getDirection(Left);
+                availableDirections |= Left;
+                availableDirections |= getCardinalDirection(Left);
             }
 
-            // If a line is seen on the right side, mark the appropriate cardinal direction as available
+            // If a line is seen on the right side, mark the appropriate directions as available
             if (avgSensorValues[4] > WHITE_THRESHOLD)
             {
-                availableDirections |= getDirection(Right);
+                availableDirections |= Right;
+                availableDirections |= getCardinalDirection(Right);
             }
 
             // Calculate drive speeds using proportional control
@@ -181,10 +204,11 @@ int followToTurn()
             // The robot has centered itself over the intersection
             if (abs(leftError) < SCAN_COMPLETE_MARGIN && abs(rightError) < SCAN_COMPLETE_MARGIN)
             {
-                // If a line is seen on the center sensor, mark the appropriate cardinal direction as available
+                // If a line is seen on the center sensor, mark the appropriate directions as available
                 if (avgSensorValues[2] > WHITE_THRESHOLD)
                 {
-                    availableDirections |= getDirection(Forward);
+                    availableDirections |= Forward;
+                    availableDirections |= getCardinalDirection(Forward);
                 }
 
                 // The intersection detection is done
@@ -232,7 +256,8 @@ int followToTurn()
     }
 
     // Marks the origin direction as available
-    availableDirections |= getDirection(Backward);
+    availableDirections |= Backward;
+    availableDirections |= getCardinalDirection(Backward);
 
     // Stop the motors in case the user's code takes a significant length of time
     motors.setSpeeds(0, 0);
@@ -242,7 +267,7 @@ int followToTurn()
 }
 
 // Turns to the specified cardinal direction
-void turn(Direction targetDirection)
+void turnCardinal(CardinalDirection targetDirection)
 {
     // Determine the target angle in degrees
     double targetAngle;
@@ -277,4 +302,10 @@ void turn(Direction targetDirection)
 
     // Stop the motors in case the user's code takes a significant length of time
     motors.setSpeeds(0, 0);
+}
+
+// Turns to the specified relative direction
+void turnRelative(RelativeDirection targetDirection)
+{
+    turnCardinal(getCardinalDirection(targetDirection));
 }

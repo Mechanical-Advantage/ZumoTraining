@@ -41,7 +41,7 @@ void setup()
 
 void loop()
 {
-    int availableDirections = followToTurn(); // Follows a line until it finds an intersection or dead end, then returns which cardinal directions are available
+    int availableDirections = followToTurn(); // Follows a line until it finds an intersection or dead end, then returns which directions are available
 
     // This writes the available directions to the screen
     lcd.clear();
@@ -68,13 +68,59 @@ void loop()
         lcd.print("W");
     }
 
-    // This writes whether the end was reached
+    // In additon to reading cardinal directions, the "availableDirections" includes relative directions
     lcd.gotoXY(0, 1);
-    lcd.print(finished ? "Done!" : "Cont."); // "finished" stores whether the end has been detected
+    if (availableDirections & Forward)
+    {
+        lcd.print("F");
+    }
 
-    // When the A button is pressed, turn to the left.
+    lcd.gotoXY(1, 1);
+    if (availableDirections & Right)
+    {
+        lcd.print("R");
+    }
+
+    lcd.gotoXY(2, 1);
+    if (availableDirections & Backward)
+    {
+        lcd.print("B");
+    }
+
+    lcd.gotoXY(3, 1);
+    if (availableDirections & Left)
+    {
+        lcd.print("L");
+    }
+
+    // This indicates whether the end was reached
+    ledGreen(finished ? 1 : 0); // "finished" stores whether the end has been detected
+
+    // Wait for the A button to be pressed, then print the cardinal direction to turn
     buttonA.waitForButton();
+    lcd.clear();
+    lcd.print("Going");
+    lcd.gotoXY(0, 1);
+    switch (getCardinalDirection(Left)) // "getCardinalDirection" can be used to convert relative directions to cardinal directions
+    {
+    case North:
+        lcd.print("north");
+        break;
+
+    case East:
+        lcd.print("east");
+        break;
+
+    case South:
+        lcd.print("south");
+        break;
+
+    case West:
+        lcd.print("west");
+        break;
+    }
+
+    // Wait one second, then turn
     delay(1000);
-    Direction leftDirection = getDirection(Left); // The turn function requires a cardinal direction, so we can use the "getDirection" function to find a cardinal direction based on a relative direction ("Left", "Forward", "Right", or "Backward").
-    turn(leftDirection);                          // Turn to the correct cardinal direction
+    turnRelative(Left); // Turn to the left. You can also use the function "turnCardinal" to turn to a specified cardinal direction
 }
