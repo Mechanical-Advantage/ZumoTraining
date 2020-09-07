@@ -14,7 +14,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * This challenge makes use of two line sensors we haven't used previously, meaning you must reconfigure the jumpers on the Zumo's front sensor array. [This video](https://drive.google.com/file/d/1sCsUIG6LEr4cQy_7eSqMPwwuEOuQpxoX/view?usp=sharing) demonstrates how to do that. **Be very careful to align the pins correctly when reconnecting the board.** Once connected, you should see that it is centered behind the medal blade with an even gap on each side.
 
-* For reference purposes, a PDF of the maze is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/09-maze.pdf).
+* For reference purposes, a PDF of the maze is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/09-maze.pdf).
 
 ## Challenge
 
@@ -24,11 +24,11 @@ If you need assistance with anything (even if you just don't know where to start
 
 3. Run the template code and place the robot centered on the black calibration line in the corner of the paper (seen below). The exact location/direction on the line doesn't matter so long as the sensors stay on the paper during calibration. Press A to calibrate the line sensors and gyro sensor. When setting up the maze, you should choose a location on a hard surface and with even lighting. You should also avoid anywhere with direct sunlight.
 
-![Picture of calibration position](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/09-calibrationpos.jpg)
+![Picture of calibration position](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/09-calibrationpos.jpg)
 
 4. Move the robot to the start of the maze and point it directly upwards (seen below). The alignment here is critical - make sure the robot is aligned exactly with the direction of the line.
 
-![Picture of start position](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/development/resources/09-startpos.jpg)
+![Picture of start position](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/09-startpos.jpg)
 
 5. Press A to start line following. The robot will run forwards until it finds the first intersection, then stop. The template program will display the available directions on the LCD, both as cardinal directions (north, east, south, west) and relative directions (foward, right, backward, left). The green LED will indicate once the end of the maze has been reached. When you press A again, the robot will turn left and continue following (it will lso display the cardinal direction it turns to on the LCD). Notice that if you continue this cycle, the robot will continue trying to turn left even when a line doesn't exist - your code will have to be careful to avoid this issue.
 
