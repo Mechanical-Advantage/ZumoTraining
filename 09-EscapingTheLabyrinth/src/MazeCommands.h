@@ -267,7 +267,7 @@ int followToTurn()
 }
 
 // Turns to the specified cardinal direction
-void turnCardinal(CardinalDirection targetDirection)
+void turn(CardinalDirection targetDirection)
 {
     // Determine the target angle in degrees
     double targetAngle;
@@ -305,7 +305,7 @@ void turnCardinal(CardinalDirection targetDirection)
 }
 
 // Turns to the specified relative direction
-void turnRelative(RelativeDirection targetDirection)
+void turn(RelativeDirection targetDirection)
 {
-    turnCardinal(getCardinalDirection(targetDirection));
+    turn(getCardinalDirection(targetDirection));
 }

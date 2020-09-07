@@ -34,7 +34,7 @@ If you need assistance with anything (even if you just don't know where to start
 
     * *The line following and turning code can be finnicky. If the robot is behaving unexpectedly (going off the lines, turning to the wrong direction, etc.) please try moving the maze a different environment or starting the calibration in a different location. If the problem persists, please contact us for assistance.*
 
-6. Read over the template code. The loop code uses various functions to assist with maze navigation like `followToTurn()`, `turnRelative()`, and `getCardinalDirection()`. The code for these functions is located in "MazeCommands.h" for those interested. The template code also reads the variable `finished` to determine when the end has been detected.
+6. Read over the template code. The loop code uses various functions to assist with maze navigation like `followToTurn()`, `turn()`, and `getCardinalDirection()`. The code for these functions is located in "MazeCommands.h" for those interested. The template code also reads the variable `finished` to determine when the end has been detected.
 
 7. The goal of the challenge is to make the robot find its way from the start of the maze to the end. This means you should replace the section of template code that waits for the A button to be pressed and turns left. Instead, the robot should automatically choose which direction to turn and continue immediately. Here are a few things to consider as you craft your algorithm:
 
