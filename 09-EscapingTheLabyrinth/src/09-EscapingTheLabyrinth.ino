@@ -124,32 +124,3 @@ void loop()
     delay(1000);
     turn(Left); // Turn to the left. You can also use this function to turn to a specified cardinal direction
 }
-
-void iterate()
-{
-    int availableDirections = followToTurn();
-    CardinalDirection origin = getCardinalDirection(Backward);
-
-    CardinalDirection possibleDirections[4] = {North,
-                                               East,
-                                               South,
-                                               West};
-    for (int i = 0; i < 4; ++i)
-    {
-        if (possibleDirections[i] != origin) // Don't go the same way we came in
-        {
-            if (availableDirections & possibleDirections[i]) // Only go if available
-            {
-                turn(possibleDirections[i]);
-                iterate();
-                if (finished)
-                {
-                    break;
-                }
-            }
-        }
-    }
-
-    turn(origin);
-    followToTurn();
-}
