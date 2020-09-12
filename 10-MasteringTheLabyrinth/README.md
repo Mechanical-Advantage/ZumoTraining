@@ -14,6 +14,8 @@ If you need assistance with anything (even if you just don't know where to start
 
 * The robot must be configured to use all five line sensors. The [previous challenge](../09-EscapingTheLabyrinth) contained instructions on how to switch the jumpers.
 
+* This challenge involves extensive use of arrays. You should go through [this tutorial](https://www.learn-c.org/en/Arrays) if you'd like a refresher.
+
 * This challenge will start to introduce concepts related to *object-oriented programming*. You should read through [this introduction](OOIntro.md) if you're unfamiliar with these concepts (or would like a refresher).
 
 ## Challenge
