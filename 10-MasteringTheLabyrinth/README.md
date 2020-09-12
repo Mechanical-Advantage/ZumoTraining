@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this challenge, you'll build off the work you've done to the solve a maze of lines. You'll allow the robot to run through the maze a second time after finding the optimal route.
+In this challenge, you'll build off the work you've done to the solve a maze of lines by making the robot run through the maze a second time using the optimal route.
 
 ## Support
 
@@ -12,7 +12,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have completed all previous challenges - this challenge builds off what you have previously learned.
 
-* The robot must be configured to use all five line sensors. The previous challenge contained instructions on how to switch the jumpers.
+* The robot must be configured to use all five line sensors. The [previous challenge](../09-EscapingTheLabyrinth) contained instructions on how to switch the jumpers.
 
 * This challenge will start to introduce concepts related to *object-oriented programming*. You should read through [this introduction](OOIntro.md) if you're unfamiliar with these concepts (or would like a refresher).
 

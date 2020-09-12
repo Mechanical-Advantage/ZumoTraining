@@ -34,13 +34,13 @@ In object-oriented systems, each object should keep its internal state (data) pr
 
 Since an object stores private data, other objects need a way to interact with that data. Therefore, each object should expose a high-level mechanism for using it. This is its *interface*. This mechanism should hide internal implementation details. It should only reveal operations relevant for the other objects. This also means that an object's internal implementation can change without affecting the system, as long as the interface remains the same. Here are some examples:
 
-* When using your phone, you have just a few buttons and inputs to use (the *interface*). You don't have to understand what's happening under the hood (the *implementation*). Using the phone remains simple despite it's complexity.
+* When using your phone, you have just a few buttons and inputs to use (the *interface*). You don't have to understand what's happening under the hood (the *implementation*). Using the phone remains simple despite its complexity.
 
 * When driving a car, you have a limited number of controls (steering wheel, pedals, etc.) You don't have to understand what's happening under the hood (literally). This also means that the *implementation* can change without affecting the *interface*. For example, an electric car is controlled the same as a gas model even though the implementation is completely different!
 
 ## Methods and Attributes
 
-Thus far, we've used the terms "data" and "interface" to describe the pieces of a class. However, we generally use different terms:
+Thus far, we've used the words "data" and "interface" to describe the pieces of a class. However, we generally use different terms:
 
 * An object's data are its **attributes**. Attributes are variables within a class.
 
@@ -70,4 +70,4 @@ Our robot code matches this physical structure by defining a class for each type
 
 These are only part of a single subsystem, so they aren't exposed. To interact with them, each subsystem provides methods like `moveToPosition()` or `setSpeed()`. The other parts of the robot code don't know or care about how the subsystem's implementation works (like which motor controllers are being used).
 
-This structure simplifies the robot code because each piece is only exposed to the relevant data and interfaces. It also makes more sense, because it matches the physical structure of the robot.
+This structure simplifies the robot code because each piece is only exposed to the relevant data and interfaces. It also makes more sense logically, because it matches the physical structure of the robot.
