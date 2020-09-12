@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this challenge, you will use the Zumo's gyro sensor to allow it to maintain orientation as a surface rotates underneath it - with a catch :open_mouth:. Unlike [challenge 5](https://github.com/Mechanical-Advantage/Training2020/tree/master/05-FindingTheWay), we haven't provided code to convert the gyro sensor's angular velocity measurement to position.
+In this challenge, you will use the Zumo's gyro sensor to allow it to maintain orientation as a surface rotates underneath it - with a catch :open_mouth:. Unlike [challenge 5](../05-FindingTheWay), we haven't provided code to convert the gyro sensor's angular velocity measurement to position.
 
 ## Support
 
@@ -32,7 +32,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 4. Notice what the gyro sensor reads while the robot is stationary. Is it 0 degrees per second as you might expect? Make a note of this - it'll be important later. :wink:
 
-5. Read through the template code and try to understand what everything does. Your challenge will be to add code to the `updateAngle` function so that the `angle` variable tracks the current gyro position. Right now, `angle` is not updated and remains at 0. It's printed to the LCD and will be used in a proportional control system when the A button is pressed a second time. This control system will hold the robot at 0°, like [challenge 5](https://github.com/Mechanical-Advantage/Training2020/tree/master/05-FindingTheWay).
+5. Read through the template code and try to understand what everything does. Your challenge will be to add code to the `updateAngle` function so that the `angle` variable tracks the current gyro position. Right now, `angle` is not updated and remains at 0. It's printed to the LCD and will be used in a proportional control system when the A button is pressed a second time. This control system will hold the robot at 0°, like [challenge 5](../05-FindingTheWay).
 
 6. What code should go in the `updateAngle` function? We want to update `angle` based on the current angular velocity. In making this calculation, there are three important inputs; `dps` - the current angular velocity in degrees per second, `readTime` - the time of the current gyro reading in microseconds, and `lastReadTime` - the time of the previous gyro reading in microseconds. Using those values, you should calculate the displacement (change in position) from the previous measurement and adjust `angle` using that data. Please review the videos above if you need help. We can also show the math like this (Δ = change):
 
@@ -44,6 +44,6 @@ If you need assistance with anything (even if you just don't know where to start
 
 7. Once you've gotten the code to update the angle, you may notice a new problem - drift! :rage: Think back to what the gyro was reading while the robot was stationary. How could you correct for that to reduce the drift?
 
-8. Upload a video to Slack of the Zumo remaining stationary on a rotating surface (you can use the same setup as [challenge 5](https://github.com/Mechanical-Advantage/Training2020/tree/master/05-FindingTheWay)).
+8. Upload a video to Slack of the Zumo remaining stationary on a rotating surface (you can use the same setup as [challenge 5](../05-FindingTheWay)).
 
 **Remember, if you are stuck please ask for assistance on Slack or during office hours.**
