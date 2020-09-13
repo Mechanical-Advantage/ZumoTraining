@@ -7,9 +7,10 @@ Zumo32U4LCD lcd;
 // This class defines the path the robot takes, so it stores a sequence of turns (the data) and methods for using that data (the interface)
 class Path
 {
+private:                          // This "private" section contains all of the data/methods that can only be accessed within the class.
     CardinalDirection turns[100]; // This array stores the sequence of turns (recorded during the initial solve and replayed during the repeat solve)
 
-public: // This "public" section contains all of the data/methods that can be accessed outside the class. Anything above is "private" and can only be accessed by methods within the class.
+public: // This "public" section contains all of the data/methods that can be accessed outside the class.
     // This method is called during the initial solve for every turn made. It should record the turns (or a subset of them) in the "turns" array. You may need to add more data to the class to accomplish this.
     void addTurn(CardinalDirection newDirection)
     {
@@ -117,17 +118,20 @@ void loop()
         lcd.print("L");
     }
 
-    // This indicates whether the end was reached
-    ledGreen(finished ? 1 : 0); // "finished" stores whether the end has been detected
-
     if (finished) // If the finish was reached, wait for the A button and start the repeat solve.
     {
+        // If running repeat solve, stop code
+        while (repeatSolve)
+        {
+        }
+
+        // Not on repeat solve, wait for A button
         buttonA.waitForButton();
         delay(1000);
 
         finished = false;   // Reset "finished" so that the solve doesn't exit immediately
-        ledGreen(0);        // Reset the green LED
         repeatSolve = true; // Set "repeatSolve" to true to change the solve logic
+        ledGreen(1);        // Turn on the green LED to indicate that the repeat solve is running
         gyro.angle = 0;     // Reset the gyro angle since the robot was moved by hand back to the start
     }
     else // If the finish hasn't been reached, run the initial solve or repeat solve.
