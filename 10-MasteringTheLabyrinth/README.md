@@ -32,6 +32,8 @@ If you need assistance with anything (even if you just don't know where to start
 
 4. The first step is to get the initial solve working, using your work from the previous challenge. At the end of the template code is the function `getSolveDirection()`, which is used in the loop during the initial solve. It should contain your code from the previous challenge. However, note that it now needs to **return** the new direction rather than immediately turning. Test the code to make sure it can reach the end of the maze as you expect.
 
+    * You should try to use your own code here, but we don't want you to get stuck at this step. If you're struggling to write the code for the initial solve, feel free to use [this reference code](InitialSolveReference.cpp) instead.
+
 5. The next step is to create an implementation for the "Path" class. The path contains an array of directions, which can be used to record and play back a sequence. Start by making the robot record the sequence of turns from the initial solve and repeat those turns exactly on the repeat solve. You'll have to write to `turns` in `addTurn()` and read from `turns` in `getNextTurn()`. In order to do that, you might need to keep track of where in the array you're currently writing and reading. Maybe some extra attributes would be useful? :wink:
 
     * Another thing to keep in mind - you should ensure the code can only read from valid locations in the array (index 0-99). The implementation shouldn't read from invalid locations regardless of how the inferface is used (for example, if `getNextTurn()` is called more times than expected). That kind of data protection is another key benefit of an object-oriented structure.
