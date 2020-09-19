@@ -1,4 +1,4 @@
-# Challenge #11: Enter the Rings
+# Challenge #11: Enter the Ring
 
 ## Overview
 
