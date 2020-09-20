@@ -1,22 +1,22 @@
 # Zumo Sumo Rules
 
-* Masks and social distancing will be required at the event and must be observed when placing or removing Zumos from the ring
+* **Masks and social distancing will be required at the event and must be observed when placing or removing Zumos from the ring.**
 
-* The sumo ring is a 30.3" diameter white circle surrounded by a 1' black line. The ring has two starting lines (thinly outlined rectangles, with dimensions 3/8' by 4') near the center of the field. The starting lines are spaced 4' apart.
+* The sumo ring is a 30.3" diameter white circle surrounded by a 1' black line. The ring has two starting lines (lightly printed thin rectangles four inches apart) near the center of the field.
 
-* Zumo robots will be unmodified and have nothing added except for any creative identifying art applied to the face of the Zumo blade with removable markers by the competitor (being careful not to damage the label).
+* Zumo robots will be unmodified and have nothing added except for identifying labels attached to the blades. Additional, easily removable labels can also be added by the programmer to jazz up the robot! (Tiger face?)
 
-* Robots must be running autonomously and must use the same countdown length as in the template code from the time a button is pressed (5 seconds when the A button is pressed, 15 seconds for B, 30 seconds for C).
+* Robots must be running autonomously and must use the same countdown length as in the template code from the time a button is pressed (5 seconds when the A button is pressed, 15 seconds for B, 30 seconds for C). On the judge’s command, the programmer will press the specified button and place the robot anywhere behind their own starting line facing in any direction.
 
 * Matches will be of two types:
 
-    * Ladder competition – Two competitors start with their blades aligned to the inner side of each starting line (facing each other). They compete to be the first to force their opponent out of the ring during a 3 minute match. Multiple matches are played until a robot is forced out of the ring twice. The winner then progresses to the next matchup.
+    * Ladder competition – Two competitors compete to be the first to force their opponent out of the ring twice during a 3 minute match. After a robot is pushed out of the ring the judge will award a point to the winner, both programmers will retrieve their robots, reset them, and then, at the judges command, restart the timers and place the robots in the ring.  If no robot is ahead at the end of three minutes the judge will choose the winner. We will run several ladder competitions.
 
-    * Free for all – All competitors start their robots facing inwards wherever they want and the last robot in the ring wins.
+    * Free for all – All competitors start their robots facing wherever they want and the last robot in the ring wins.
 
-* Zumo code may be modified in between matches to take advantage of lessons learned (bring your laptop).
+* Zumo code may be modified in between matches to take advantage of lessons learned **(bring your charged laptop and cable and charged Zumo)**.
 
-* There will be a judge that calls the match and awards points - the judge's decisions are final.
+* There will be a judge that calls the match and awards points - the judge’s decision is final.
 
 * As always, gracious professionalism is expected.
 
