@@ -82,7 +82,7 @@ void setup()
     }
     lcd.clear(); // Clear the LCD after the countdown
 
-    // This starts the robot moving fowards
+    // This starts the robot moving forwards
     motors.setSpeeds(200, 200);
 }
 
