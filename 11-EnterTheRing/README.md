@@ -14,7 +14,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * We recommend configuring the robot to use all three proximity sensors (the template code assumes this configuration). If you have just finished challenges 9 and 10, you need to switch the jumpers back to the original setup. [Challenge 9](../09-EscapingTheLabyrinth) contained instructions on how to switch the jumpers. **The jumpers should be configured in the opposite direction of what is shown in the video (in the end, the jumpers should be closer to the edge of the sensor board).**
 
-* You should read through [our official rules](http://example.com) for the sumo competition. Feel free to ask for clarifications on any rules.
+* You should read through [our official rules](SumoRules.md) for the sumo competition. Feel free to ask for clarifications on any rules.
 
 * You should watch [this video](https://drive.google.com/file/d/1Z5ZyqqKslBiiowdKxmI1soykJrbZ11y9/view?usp=sharing) to see an example of what robot sumo looks like. If you haven't already, this is also a good time to start thinking about your strategy (what worked in the video and what didn't work?)
 
