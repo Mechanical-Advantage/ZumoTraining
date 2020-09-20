@@ -34,6 +34,8 @@ If you need assistance with anything (even if you just don't know where to start
 
     * What speed should the robot be running at? Is faster or slower better? Does it depend on how close the opponent is?
 
+    * What should your first move be? Run towards the opponent, run away, or turn?
+
     * Often, robots might get stuck with the blades pushing against each other, meaning neither can make progress. Maybe you could try to avoid (or escape) such situations? How could that work?
 
     * Feel free to look online if there are any other strategies you might want to try.

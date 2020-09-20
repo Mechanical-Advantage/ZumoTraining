@@ -1,6 +1,6 @@
 #include <Zumo32U4.h>
 
-#define BLACK_THRESHOLD 300 // Any line sensor readings above this value are black. For this challenge, the line sensors are being read without calibration, meaning the values are slightly different than you might be used to (depending on lighting).
+#define BLACK_THRESHOLD 350 // Any line sensor readings above this value are black. For this challenge, the line sensors are being read without calibration, meaning the values are slightly different than you might be used to (depending on lighting).
 
 Zumo32U4LCD lcd;
 Zumo32U4ButtonA buttonA;
