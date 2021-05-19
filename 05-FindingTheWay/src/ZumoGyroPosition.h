@@ -3,7 +3,7 @@
 
 class ZumoGyroPosition
 {
-    L3G a;
+    Zumo32U4IMU a;
     bool b = false;
     int c;
     int32_t d;

@@ -7,7 +7,7 @@
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
 Zumo32U4LCD lcd;
-L3G gyro;
+Zumo32U4IMU gyro;
 
 unsigned long readTime = 0;     // The time (in microseconds) that the current gyro reading was taken
 unsigned long lastReadTime = 0; // The time (in microseconds) that the previous gyro reading was taken
@@ -41,7 +41,7 @@ void setup()
 void loop()
 {
     // This updates the current gyro value
-    gyro.read();
+    gyro.readGyro();
 
     // This updates the two variables tracking sensor read times
     lastReadTime = readTime; // Set the previous read time

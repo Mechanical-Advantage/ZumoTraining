@@ -25,7 +25,7 @@ void ZumoGyroPosition::setup(bool i)
     unsigned long j = millis();
     while (millis() - j < 5000)
     {
-        a.read();
+        a.readGyro();
         c += 1;
         d += a.g.z;
         if (millis() - j > 1000)
@@ -48,7 +48,7 @@ void ZumoGyroPosition::update()
         g = micros();
     }
     interrupts();
-    a.read();
+    a.readGyro();
     unsigned long k = micros();
     double l = a.g.z - ((double)d / (double)c);
     if (abs(l) < (f / (double)e) * 3.5)
