@@ -16,7 +16,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have completed all previous challenges - this challenge builds off what you have previously learned.
 
-* The test track is available in two ways:
+* The test track is available in the following two ways. Note that these designs differ slightly, so comparing times between them is not advsied.
 
   * You can print out and assemble the individual pieces. [Click here](TrackSetup.md) for instructions.
 
