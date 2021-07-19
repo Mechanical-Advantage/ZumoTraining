@@ -16,7 +16,11 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You must have completed all previous challenges - this challenge builds off what you have previously learned.
 
-* You should print out and assemble the test track. [Click here](TrackSetup.md) for instructions.
+* The test track is available in two ways:
+
+  * You can print out and assemble the individual pieces. [Click here](TrackSetup.md) for instructions.
+
+  * A full PDF designed for large format printers is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/04-new-design.pdf).
 
 ## Challenge
 
