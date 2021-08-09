@@ -20,7 +20,7 @@ If you need assistance with anything (even if you just don't know where to start
 
   * You can print out and assemble the individual pieces. [Click here](TrackSetup.md) for instructions.
 
-  * A full PDF designed for large format printers is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/04-new-design.pdf).
+  * A full PDF designed for large format printers is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/04-new-design.pdf).
 
 ## Challenge
 
@@ -30,15 +30,15 @@ If you need assistance with anything (even if you just don't know where to start
 
 3. Try uploading the template sketch. Place the robot centered on the track (seen below) and press A. It will spin around once to calibrate the line sensors. This records the minimum (lightest) and maximum (darkest) possible values for each sensor, meaning the readings will be accurate regardless of lighting conditions.
 
-![Picture of suggested calibration location](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/04-calibrationpos.jpg)
+![Picture of suggested calibration location](https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/04-calibrationpos.jpg)
 
 4. Move the robot so that the front is positioned on the gray square in the corner (seen below) and press B to enter "testing" mode. It will move foward until it leaves the square, then stop.
 
-![Picture of start location](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/04-startpos.jpg)
+![Picture of start location](https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/04-startpos.jpg)
 
 5. Try moving the robot around the line and observe the readings from the three line sensors, displayed on the LCD. The two values on the top row show the left and right sensors and the value on the bottom row shows the center sensor (this is because the three values don't fit on one row). You can find these sensors under the robot on the front sensor array, seen here:
 
-![Diagram of line sensor locations](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/04-sensors.jpg)
+![Diagram of line sensor locations](https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/04-sensors.jpg)
 
 6. In addition to the "testing" mode you've been using, the template has a "timing" mode (which you can activate by pressing A instead of B). This behaves identically except that when the robot reaches the ending gray square it will stop and display the number of seconds since it left the first gray square. Eventually, you will use this mode to test the speed of your line following algorithms. Feel free to continue using the "testing" mode while developing.
 

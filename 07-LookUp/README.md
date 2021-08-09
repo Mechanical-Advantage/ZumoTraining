@@ -36,6 +36,11 @@ If you need assistance with anything (even if you just don't know where to start
 
 6. Proportional control will behave very differently depending on the gain (constant factor) you choose. If the gain is too low, the robot won't be able to reach the target. However, if the gain is too high, the robot may oscillate, particularly because fast motion can affect accelerometer readings. The process of finding the optimal gain using trial and error is called "tuning". Tune your robot until you find an optimal balance between speed and accuracy. You may also find it useful to set a minimum speed, so that the robot doesn't stop before reaching the target.
 
+    <details>
+        <summary>Click here if you've finished and are looking for a challenge.</summary>
+        If you solved the challenge using only one accelerometer reading, try the following experiment; allow the Zumo to find uphill, then tilt the platform forward quickly to make it face <i>directly downhill</i> instead. If you hold steady (and don't have too large of a gain), the Zumo will stay where it is despite being pointed in the wrong direction. Why is that? Try to fix this flaw by using multiple accelerometer readings. <a href="https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/07-hint.pdf">Click here</a> if you'd like a hint.
+    </details>
+
 6. Upload a video to Slack of the Zumo facing upwards **using proportional control**.
 
 **Remember, if you are stuck please ask for assistance on Slack or during office hours.**

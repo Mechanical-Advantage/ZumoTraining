@@ -18,7 +18,7 @@ If you need assistance with anything (even if you just don't know where to start
 
 * You should watch [this video](https://drive.google.com/file/d/1Z5ZyqqKslBiiowdKxmI1soykJrbZ11y9/view?usp=sharing) to see an example of what robot sumo looks like. If you haven't already, this is also a good time to start thinking about your strategy (what worked in the video and what didn't work?)
 
-* For reference purposes, a PDF of the ring is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/Training2020/master/resources/11-ring.pdf).
+* For reference purposes, a PDF of the ring is available [here](https://raw.githubusercontent.com/Mechanical-Advantage/SummerTraining2020/master/resources/11-ring.pdf).
 
 ## Challenge
 
