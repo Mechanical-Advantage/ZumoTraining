@@ -34,9 +34,9 @@ void loop()
     delay(50); // DO NOT REMOVE
 
     // This logs the current accelerometer values, comma separated. This means they can be viewed as separate series in the serial plotter.
-    Serial.print(accel.a.x); // Log the x acceleration (left-right)
+    Serial.print(accel.a.x); // Log the x acceleration (forward-backward)
     Serial.print(",");
-    Serial.print(accel.a.y); // Log the y acceleration (forward-backward)
+    Serial.print(accel.a.y); // Log the y acceleration (left-right)
     Serial.print(",");
     Serial.println(accel.a.z); // Log the z acceleration (up-down)
 
