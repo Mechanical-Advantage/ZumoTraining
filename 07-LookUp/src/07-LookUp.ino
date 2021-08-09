@@ -4,7 +4,7 @@
 Zumo32U4Motors motors;
 Zumo32U4ButtonA buttonA;
 Zumo32U4LCD lcd;
-LSM303 accel;
+Zumo32U4IMU accel;
 
 // This function is run once, when the Zumo starts up
 void setup()
