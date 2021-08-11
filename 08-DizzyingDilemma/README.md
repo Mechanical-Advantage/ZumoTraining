@@ -46,7 +46,7 @@ If you need assistance with anything (even if you just don't know where to start
 
     <details>
         <summary>Bonus challenge</summary>
-        After you get the code working, run it again on multiple Zumos if possible. Do they all behave the same? You can correct for any differences using a calibration step in the `setup()` function. Try to achieve equivalent reliability regardless of which robot you're running with.
+        After you get the code working, run it again on multiple Zumos if possible. Do they all behave the same? You can correct for any differences by writing a calibration routine in the setup function. Try to achieve equivalent reliability regardless of which robot you're running with.
     </details>
 
 8. Upload a video to Slack of the Zumo remaining stationary on a rotating surface (you can use the same setup as [challenge 5](../05-FindingTheWay)).
