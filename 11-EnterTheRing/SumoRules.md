@@ -1,7 +1,5 @@
 # Zumo Sumo Rules
 
-* **Masks and social distancing will be required at the event and must be observed when placing or removing Zumos from the ring.**
-
 * The sumo ring is a 30.3" diameter white circle surrounded by a 1' black line. The ring has two starting lines (lightly printed thin rectangles four inches apart) near the center of the field.
 
 * Zumo robots will be unmodified and have nothing added except for identifying labels attached to the blades. Additional, easily removable labels can also be added by the programmer to jazz up the robot! (Tiger face?)
@@ -14,7 +12,7 @@
 
     * Free for all – All competitors start their robots facing wherever they want and the last robot in the ring wins.
 
-* Zumo code may be modified in between matches to take advantage of lessons learned **(bring your charged laptop and cable and charged Zumo)**.
+* Zumo code may be modified in between matches to take advantage of lessons learned.
 
 * There will be a judge that calls the match and awards points - the judge’s decision is final.
 
