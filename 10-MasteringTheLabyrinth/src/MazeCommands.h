@@ -1,13 +1,15 @@
 #include <Zumo32U4.h>
 #include "ZumoGyroPosition.h"
 
+#define NOMINAL_VOLTAGE 5600
+
 #define WHITE_THRESHOLD 200     // The maximum line sensor reading to be read as white
 #define BLACK_THRESHOLD 900     // The minimum line sensor reading to be read as black
 #define SENSOR_HISTORY_LENGTH 5 // The number of sensor values to average for detecting intersections
-#define BASE_SPEED 150          // The base motor speed while line following
+#define BASE_SPEED 80           // The base motor speed while line following
 
-#define FOLLOW_GAIN 0.2           // The gain to use while line following
-#define FOLLOW_MAX_TURN_SPEED 200 // The maximum turn speed to use while line following
+#define FOLLOW_GAIN 0.15          // The gain to use while line following
+#define FOLLOW_MAX_TURN_SPEED 150 // The maximum turn speed to use while line following
 #define FOLLOW_MIN_TIME 350       // The miniumum number of milliseconds to follow the line before scnning for intersections
 
 #define SCAN_DISTANCE 375       // The amount to drive forward after initial detection of an intersection (encoder ticks)
@@ -15,7 +17,7 @@
 #define SCAN_COMPLETE_MARGIN 20 // The maximum error to finish scan movement (encoder ticks)
 
 #define TURN_GAIN 30           // The gain to use while turning to an angle
-#define TURN_MAX_SPEED 150     // The maximum motor speed to use while turning
+#define TURN_MAX_SPEED 120     // The maximum motor speed to use while turning
 #define TURN_COMPLETE_MARGIN 2 // The maximum error to finish a turn (degrees)
 
 Zumo32U4LineSensors lineSensors;
@@ -43,6 +45,16 @@ enum RelativeDirection
     Backward = 64,
     Left = 128
 };
+
+// Drives while compensating for battery voltage to improve consistency.
+void driveCompensated(int left, int right)
+{
+    int battery = readBatteryMillivolts();
+    int leftPower = ((((double)left / 400) * NOMINAL_VOLTAGE) / battery) * 400;
+    int rightPower = ((((double)right / 400) * NOMINAL_VOLTAGE) / battery) * 400;
+    Serial.println(left);
+    motors.setSpeeds(leftPower, rightPower);
+}
 
 // Calibrates the line sensors and gyro sensor (should be placed over the calibration area and not moved)
 void calibrate()
@@ -197,7 +209,7 @@ int followToTurn()
             int leftError = SCAN_DISTANCE - encoders.getCountsLeft();
             int rightError = SCAN_DISTANCE - encoders.getCountsRight();
 
-            motors.setSpeeds(
+            driveCompensated(
                 constrain(leftError * SCAN_GAIN, BASE_SPEED * -1, BASE_SPEED),
                 constrain(rightError * SCAN_GAIN, BASE_SPEED * -1, BASE_SPEED));
 
@@ -229,7 +241,7 @@ int followToTurn()
             else if (avgSensorValues[0] > WHITE_THRESHOLD || avgSensorValues[4] > WHITE_THRESHOLD) // The left or right sensor sees a line, so start centering on the intersection
             {
                 // Go directly forward, stop line following
-                motors.setSpeeds(BASE_SPEED, BASE_SPEED);
+                driveCompensated(BASE_SPEED, BASE_SPEED);
 
                 // Reset the encoders
                 encoders.getCountsAndResetLeft();
@@ -251,7 +263,7 @@ int followToTurn()
 
             // Nothing unusual happening, follow the line
             int turnSpeed = constrain((linePosition - 2000) * FOLLOW_GAIN, FOLLOW_MAX_TURN_SPEED * -1, FOLLOW_MAX_TURN_SPEED); // Calculate turn speed using proportional control
-            motors.setSpeeds(BASE_SPEED + turnSpeed, BASE_SPEED - turnSpeed);                                                  // Run the motors based on the turn speed
+            driveCompensated(BASE_SPEED + turnSpeed, BASE_SPEED - turnSpeed);                                                  // Run the motors based on the turn speed
         }
     }
 
@@ -261,6 +273,23 @@ int followToTurn()
 
     // Stop the motors in case the user's code takes a significant length of time
     motors.setSpeeds(0, 0);
+
+    // Reset the gyro to the nearest cardinal direction (improves reliability over long runs)
+    switch (getCardinalDirection(Forward))
+    {
+    case North:
+        gyro.angle = 0;
+        break;
+    case East:
+        gyro.angle = 90;
+        break;
+    case South:
+        gyro.angle = 180;
+        break;
+    case West:
+        gyro.angle = -90;
+        break;
+    }
 
     // Return the available directions
     return availableDirections;
@@ -297,7 +326,7 @@ void turn(CardinalDirection targetDirection)
         gyro.update();                                                                     // Update the gyro sensor
         error = simplifyAngle(targetAngle - gyro.angle);                                   // Calculate the current error
         int turnSpeed = constrain(error * TURN_GAIN, TURN_MAX_SPEED * -1, TURN_MAX_SPEED); // Calculate turn speed using proportional control
-        motors.setSpeeds(turnSpeed, turnSpeed * -1);                                       // Run the motors based on the turn speed
+        driveCompensated(turnSpeed, turnSpeed * -1);                                       // Run the motors based on the turn speed
     } while (abs(error) > TURN_COMPLETE_MARGIN);
 
     // Stop the motors in case the user's code takes a significant length of time

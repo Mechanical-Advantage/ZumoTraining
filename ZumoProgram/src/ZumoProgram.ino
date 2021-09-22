@@ -30,7 +30,7 @@ void setup()
     // lcd.print(" TOUCH!");
     // ledRed(1);
     // delay(1000);
-    // gyro.setup(true);
+    // gyroPos.setup(true);
     // ledRed(0);
     // lcd.clear();
 }
