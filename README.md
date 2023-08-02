@@ -1,4 +1,4 @@
-# FRC 6328 Remote Software Learning 2020
+# FRC 6328 Zumo Software Training Curriculum
 
 ## Summary
 
