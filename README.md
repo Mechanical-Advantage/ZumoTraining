@@ -1,5 +1,7 @@
 # FRC 6328 Zumo Software Training Curriculum
 
+Student code is part of the [ZumoTrainingCode](https://github.com/Mechanical-Advantage/ZumoTrainingCode) repository.
+
 ## Summary
 
 6328 has developed a remote-learning software curriculum which uses small, inexpensive robots to teach key robot control concepts through a series of escalating challenges. Students learn by doing in a progressive manner, with support provided by student leads and mentors through online collaboration tools.
